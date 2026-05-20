@@ -1,202 +1,702 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Ceefour: Clinical Data Scientist | Generative & Agentic AI </title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Ceefour | Clinical Data Scientist & Bioinformatician</title>
+	
+	<!-- SEO Best Practices -->
+	<meta name="description" content="Portfolio of Ceefour, a Clinical Data Scientist and Bioinformatician working at the intersection of cancer genomics, computational epidemiology, and healthcare AI. Discover advanced bioinformatics pipelines, somatic variant calling, molecular epidemiology, and machine learning solutions in precision oncology." />
+	<meta name="keywords" content="Bioinformatics, Cancer Genomics, Clinical Data Science, Computational Biology, Precision Oncology, Molecular Epidemiology, Somatic Variant Calling, Python, R, GATK, Nextflow" />
+	<meta name="author" content="Ceefour" />
+	<meta name="robots" content="index, follow" />
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="assets/css/modern-theme.css" />
+</head>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Ceefour: Clinical Data Scientist | Generative & Agentic AI<br />
-						</h1>
-						<a></a></p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
+<body>
+	<!-- Decorative Glowing Background Blobs -->
+	<div class="glowing-blob blob-1" id="blob-decor-1"></div>
+	<div class="glowing-blob blob-2" id="blob-decor-2"></div>
+	<div class="glowing-blob blob-3" id="blob-decor-3"></div>
+
+	<!-- Sticky Header & Nav -->
+	<header id="main-header">
+		<div class="container nav-container">
+			<a href="#hero" class="logo-text" id="brand-logo">CEEFOUR</a>
+			
+			<nav>
+				<ul class="nav-links" id="navigation-menu">
+					<li><a href="#about" id="nav-link-about">About</a></li>
+					<li><a href="#competencies" id="nav-link-competencies">Competencies</a></li>
+					<li><a href="#expertise" id="nav-link-expertise">Expertise</a></li>
+					<li><a href="#projects" id="nav-link-projects">Projects</a></li>
+					<li><a href="#contact" id="nav-link-contact">Contact</a></li>
+				</ul>
+			</nav>
+
+			<div class="nav-socials" id="header-socials">
+				<a href="https://github.com/Ceefour18" target="_blank" rel="noopener" aria-label="GitHub Profile" id="social-github-hdr">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+				</a>
+				<a href="https://www.linkedin.com/in/clement-akinsola/" target="_blank" rel="noopener" aria-label="LinkedIn Profile" id="social-linkedin-hdr">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+				</a>
+				<a href="https://x.com/ceefourme" target="_blank" rel="noopener" aria-label="Twitter Profile" id="social-twitter-hdr">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+				</a>
+			</div>
+			
+			<button class="mobile-nav-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+			</button>
+		</div>
+	</header>
+
+	<!-- Main Container -->
+	<main>
+		<!-- Hero Section -->
+		<section id="hero" class="container">
+			<div class="hero-wrapper">
+				<div class="hero-content">
+					<div class="hero-badge" id="hero-status-badge">
+						<span class="pulse-dot"></span>
+						Bioinformatics & Cancer Genomics
 					</div>
-
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">CEEFOUR</a>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">CEEFOUR</a></li>
-
-						</ul>
-						<ul class="icons">
-							<li><a href="https://x.com/ceefourme" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.linkedin.com/in/clement-akinsola/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-							<li><a href="https://github.com/Ceefour18" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									
-									<h2><a href="#">Meet Ceefour<br />
-									</a></h2>
-									<p>As a Clinical Data Scientist with a background in biological sciences, I’ve evolved from a statistician using tools like SPSS, EPI INFO, and STATA to a data professional proficient in SQL, Python, and R, leveraging them to extract valuable insights from data. Along this journey, I’ve also developed expertise in Generative AI and AI agent design, using these advanced technologies to automate clinical workflows, enhance decision-making, and support research innovation. My diverse experiences have shaped a dynamic learning and growth path.
-						
-										Key strengths include:
-										<li>I build and deploy AI agents and agentic AI architectures to tackle complex clinical problems and improve healthcare outcomes.</li>
-										<li>Proficient in Python and SQL for data manipulation, analysis, and modeling, with intermediate proficiency in R.</li>
-										<li>Deep understanding of machine learning and deep learning algorithms.</li>
-										<li>Skilled in using pre-trained models and APIs from Hugging Face, OpenAI, and DeepSeek for building intelligent clinical applications.</li>
-										<li>Proficient in prompt engineering and fine-tuning techniques to control LLM behavior for domain-specific outputs</li>
-										<li>Use domain-specific LLMs like Med-PaLM, BioMedLM, ClinicalBERT, PubMedGPT, for clinical NLP and biomedical text understanding</li>
-										<li>Experienced with Google Cloud Platform tools</li>
-										<li>Knowledge of HIPAA/GDPR compliance, data de-identification, and ethical AI practices in healthcare.</li>
-								</header>
-								<a href="#" class="image main"><img src="images/Image_2.jpg.jpeg" alt="" /></a>
-								<ul class="actions special">
-									
-								</ul>
-							</article>
-
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<h2><a href="https://github.com/Ceefour18/Predicting-mortality-using-logistic-regression">Predicting mortality using logistic regression<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Ceefour18/Predicting-mortality-using-logistic-regression" class="image fit"><img src="images/Logistic.jpeg" alt="" /></a>
-									<p>This project was developed to leverage a logistic regression algorithm to predict mortality risk in heart failure patients. By analyzing patient data and identifying key predictors, the model aims to provide insights into survival rates, helping healthcare providers make informed decisions and prioritize interventions for high-risk patients.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Ceefour18/Predicting-mortality-using-logistic-regression" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/Ceefour18/Cancer_Exploratory"> Exploratory data analysis using python<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Ceefour18/Cancer_Exploratory" class="image fit"><img src="images/explore2.jpeg" alt="" /></a>
-									<p>The objective of this task is to clean the data, remove rows with incomplete information, and perform basic exploratory data analysis</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Ceefour18/Cancer_Exploratory" class="button">View project</a></li>
-									</ul>
-								</article>
-
-								<article>
-									<header>
-										<h2><a href="https://github.com/Ceefour18/Beats-by-Dre-Consumer-Insights/blob/main/Copy_of_Beats_by_Dre_Consumer_Insights_Capstone_Project_Template.ipynb"> Beats by Dre Consumer Insights<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Ceefour18/Beats-by-Dre-Consumer-Insights/blob/main/Copy_of_Beats_by_Dre_Consumer_Insights_Capstone_Project_Template.ipynb" class="image fit"><img src="images/Image12.jpg" alt="" /></a>
-									<p>This current projects is designed to derive and compare the customer review insights of Beat by Dre speakers in comparison to other nine speakers of same price ranges. This insight will includes reviews and feedback retrieved from Amazon to providing valuable comparisons and customer perspectives</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Ceefour18/Beats-by-Dre-Consumer-Insights/blob/main/Copy_of_Beats_by_Dre_Consumer_Insights_Capstone_Project_Template.ipynb" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/Ceefour18/HMPV">Chatbot for Human metapneumovirus<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Ceefour18/HMPV" class="image fit"><img src="images/hmpv.jpeg" alt="" /></a>
-									<p> This project features an interactive AI-powered chatbot designed to answer questions about the Human Metapneumovirus (hMPV). Leveraging the capabilities of LLM and retrieval-augmented generation (RAG), the chatbot provides accurate, up-to-date, and context-aware responses</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Ceefour18/HMPV" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/Ceefour18/Streamlitapp">Streamlit web interface<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Ceefour18/Streamlitapp" class="image fit"><img src="images/streamlit.jpg" alt="" /></a>
-									<p> I built an interactive Streamlit web interface to showcase my data science services and project offerings. The application features a clean, user-friendly layout and integrates dynamic content to highlight my expertise in clinical data analysis, machine learning, and generative AI. It serves as a professional touchpoint for potential collaborators and clients to explore my work.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Ceefour18/Streamlitapp" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/Ceefour18/Analysis-Highlight">Clinical data analysis highlights<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Ceefour18/Analysis-Highlight" class="image fit"><img src="images/presentation.jpg" alt="" /></a>
-									<p> This contains data analysis presentations highlights, including tables and chart The content demonstrates proficiency in descriptive and inferential data analysis and  result interpretation.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Ceefour18/Analysis-Highlight" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/Ceefour18/Peer-reviewed-Publication">Publications in peer-reviewed journals<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Ceefour18/Peer-reviewed-Publication" class="image fit"><img src="images/journals.jpg" alt="" /></a>
-									<p> I have co-authored publications in peer-reviewed journals, contributing to advancements in clinical research and data-driven healthcare insights. Please find the publications</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Ceefour18/Peer-reviewed-Publication" class="button">View project</a></li>
-									</ul>
-								</article>
-							</section>
-
-						<!-- Footer -->
-							
-					
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>Lagos, Nigeria<br />
-								</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(234) 817-422-6011</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">ceefourme@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://x.com/ceefourme" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.linkedin.com/in/clement-akinsola/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-									<li><a href="https://github.com/Ceefour18" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					<h1 class="hero-title" id="main-portfolio-title">
+						Ceefour
+						<span>Clinical Data Scientist & Bioinformatician</span>
+					</h1>
+					<p class="hero-desc" id="hero-tagline">
+						Working at the intersection of biological sciences, cancer genomics, computational epidemiology, and biomedical data science to translate complex genomic patterns into precision oncology insights.
+					</p>
+					<div class="hero-actions" id="hero-cta-buttons">
+						<a href="#projects" class="btn btn-primary" id="btn-view-work">
+							Explore My Work
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
+						<a href="#contact" class="btn btn-secondary" id="btn-get-touch">Get In Touch</a>
 					</div>
+				</div>
+				
+				<div class="hero-visual" id="hero-avatar-area">
+					<div class="profile-container">
+						<div class="profile-glow" id="avatar-backdrop-glow"></div>
+						<div class="profile-card" id="avatar-card">
+							<!-- Profile image -->
+							<img src="images/Image_2.jpg" alt="Ceefour Portrait" id="profile-img" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%230f172a\'><rect width=\'100\' height=\'100\'/><circle cx=\'50\' cy=\'40\' r=\'20\' fill=\'%2338bdf8\'/><path d=\'M20,80 Q50,55 80,80\' fill=\'%2338bdf8\'/></svg>'" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<!-- About & Domain Focus Section -->
+		<section id="about" class="section container">
+			<div class="section-header" id="about-section-header">
+				<span class="section-subtitle">Bridging Science & Code</span>
+				<h2 class="section-title">My Professional Focus</h2>
+				<p class="section-desc">
+					Bringing biological hypothesis and mathematical rigor together to dissect disease mechanisms.
+				</p>
+			</div>
+			
+			<div class="about-grid" id="about-details-grid">
+				<div class="narrative-box" id="narrative-card">
+					<p>
+						My work bridges traditional epidemiological analysis and modern computational biology with a focused interest in understanding the molecular and genomic basis of cancer. 
+					</p>
+					<p>
+						I apply computational approaches to dissect complex biological data, from raw sequence processing (QC and alignment) to variant interpretation, functional annotation, and oncogenic pathway analysis, with the goal of generating insights that can inform cancer research and precision oncology.
+					</p>
+				</div>
+				
+				<div class="focus-box" id="domain-focus-card">
+					<h3>Domain Focus</h3>
+					<div class="focus-grid" id="focus-capsules-grid">
+						<div class="focus-tag" id="focus-tag-1">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2.5 3.19-2.5 5.5h20c0-2.31-1-4.24-2.5-5.5"></path><path d="M12 2C6.5 2 2 6.5 2 12c0 2.31.79 4.45 2.1 6.17C5.7 16.5 8.65 15.5 12 15.5s6.3.99 7.9 2.67C21.21 16.45 22 14.31 22 12c0-5.5-4.5-10-10-10z"></path></svg>
+							<span>Cancer Genomics</span>
+						</div>
+						<div class="focus-tag" id="focus-tag-2">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+							<span>Precision Oncology</span>
+						</div>
+						<div class="focus-tag" id="focus-tag-3">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+							<span>Molecular Epidemiology</span>
+						</div>
+						<div class="focus-tag" id="focus-tag-4">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line></svg>
+							<span>Functional Genomics</span>
+						</div>
+						<div class="focus-tag" id="focus-tag-5">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+							<span>Computational Biology</span>
+						</div>
+						<div class="focus-tag" id="focus-tag-6">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"></circle><circle cx="12" cy="19" r="3"></circle><circle cx="5" cy="12" r="3"></circle><circle cx="19" cy="12" r="3"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+							<span>Healthcare AI</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Core Competencies Section -->
+		<section id="competencies" class="section container">
+			<div class="section-header" id="competencies-header">
+				<span class="section-subtitle">What I Do Best</span>
+				<h2 class="section-title">Core Competencies</h2>
+				<p class="section-desc">
+					Specialized research capabilities bridging medical statistics, genomic modeling, and intelligent clinical tool development.
+				</p>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<div class="competencies-grid" id="competencies-cards-grid">
+				<!-- Competency 1 -->
+				<div class="glass-card" id="comp-card-1">
+					<div class="comp-icon">
+						<!-- Custom DNA/Genomics icon -->
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5C4.5 7 7 4.5 10.5 4.5S16.5 7 16.5 10.5 14 16.5 10.5 16.5 4.5 14 4.5 10.5z"></path><path d="M13.5 13.5L19.5 19.5"></path></svg>
+					</div>
+					<h3 class="comp-title">Cancer Genomics</h3>
+					<p class="comp-desc">Somatic variant calling, mutational signature analysis, and oncogene characterization to map genomic drivers of tumorigenesis.</p>
+				</div>
 
-	</body>
+				<!-- Competency 2 -->
+				<div class="glass-card" id="comp-card-2">
+					<div class="comp-icon">
+						<!-- Pipeline Gears icon -->
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+					</div>
+					<h3 class="comp-title">Genomic Pipeline Development</h3>
+					<p class="comp-desc">End-to-end automated pipeline construction incorporating Quality Control, sequence alignment, variant calling, and downstream functional annotation.</p>
+				</div>
+
+				<!-- Competency 3 -->
+				<div class="glass-card" id="comp-card-3">
+					<div class="comp-icon">
+						<!-- Trend Chart icon -->
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line><line x1="2" y1="20" x2="22" y2="20"></line></svg>
+					</div>
+					<h3 class="comp-title">Epidemiological Modeling</h3>
+					<p class="comp-desc">Application of univariate, bivariate, and multivariate regression modeling techniques to elucidate complex clinical outcomes and disease spreads.</p>
+				</div>
+
+				<!-- Competency 4 -->
+				<div class="glass-card" id="comp-card-4">
+					<div class="comp-icon">
+						<!-- Protein helix icon -->
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+					</div>
+					<h3 class="comp-title">Molecular Profiling & Characterization</h3>
+					<p class="comp-desc">Conserved domain identification, protein structural mapping, in silico characterization, and phylogenetic analysis of disease genes.</p>
+				</div>
+
+				<!-- Competency 5 -->
+				<div class="glass-card" id="comp-card-5">
+					<div class="comp-icon">
+						<!-- AI Brain icon -->
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+					</div>
+					<h3 class="comp-title">Machine Learning & Generative AI</h3>
+					<p class="comp-desc">Building and deploying machine learning models, clinical NLP interfaces, LLMs, and RAG architectures in oncology and healthcare settings.</p>
+				</div>
+
+				<!-- Competency 6 -->
+				<div class="glass-card" id="comp-card-6">
+					<div class="comp-icon">
+						<!-- Clipboard Checklist icon -->
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+					</div>
+					<h3 class="comp-title">Research Methodology & Support</h3>
+					<p class="comp-desc">Study design advice, methodology training, clinical trial protocol formulation, and comprehensive scientific project management support.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Technical Expertise Dashboard -->
+		<section id="expertise" class="section container">
+			<div class="section-header" id="expertise-header">
+				<span class="section-subtitle">The Tech Stack</span>
+				<h2 class="section-title">Technical Expertise</h2>
+				<p class="section-desc">
+					A balanced combination of biology tools, data science frameworks, and modern DevOps platforms.
+				</p>
+			</div>
+
+			<div class="expertise-dashboard" id="tech-dashboard-grid">
+				<!-- Panel 1: Bioinformatics -->
+				<div class="exp-panel" id="panel-bioinformatics">
+					<div class="panel-header">
+						<span class="panel-icon">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"></path><path d="M12 2v20"></path><path d="M19 17a7 7 0 0 0-14 0"></path><path d="M19 8a7 7 0 0 0-14 0"></path></svg>
+						</span>
+						<h3 class="panel-title">Bioinformatics & Genomics</h3>
+					</div>
+					<div class="skills-badge-container" id="badges-bioinformatics">
+						<span class="skill-badge" id="skill-biopython">Biopython</span>
+						<span class="skill-badge" id="skill-blast">BLAST</span>
+						<span class="skill-badge" id="skill-ncbi">NCBI Databases</span>
+						<span class="skill-badge" id="skill-fastqc">FastQC</span>
+						<span class="skill-badge" id="skill-trimmomatic">Trimmomatic</span>
+						<span class="skill-badge" id="skill-bwa">BWA</span>
+						<span class="skill-badge" id="skill-samtools">SAMtools</span>
+						<span class="skill-badge" id="skill-gatk">GATK Suite</span>
+						<span class="skill-badge" id="skill-mega">MEGA Software</span>
+						<span class="skill-badge" id="skill-nextflow">Nextflow</span>
+					</div>
+				</div>
+
+				<!-- Panel 2: Data Science & Stats -->
+				<div class="exp-panel" id="panel-datascience">
+					<div class="panel-header">
+						<span class="panel-icon">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+						</span>
+						<h3 class="panel-title">Data Science & Programming</h3>
+					</div>
+					<div class="skills-badge-container" id="badges-datascience">
+						<span class="skill-badge" id="skill-python">Python</span>
+						<span class="skill-badge" id="skill-r">R Language</span>
+						<span class="skill-badge" id="skill-bash">Linux & Bash</span>
+						<span class="skill-badge" id="skill-sql">SQL Databases</span>
+						<span class="skill-badge" id="skill-downstream">Downstream Analysis</span>
+						<span class="skill-badge" id="skill-modeling">Biostatistics Modeling</span>
+						<span class="skill-badge" id="skill-ml">Machine Learning</span>
+					</div>
+				</div>
+
+				<!-- Panel 3: Infrastructure & Platforms -->
+				<div class="exp-panel" id="panel-infrastructure">
+					<div class="panel-header">
+						<span class="panel-icon">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+						</span>
+						<h3 class="panel-title">Infrastructure & Frameworks</h3>
+					</div>
+					<div class="skills-badge-container" id="badges-infrastructure">
+						<span class="skill-badge" id="skill-docker">Docker</span>
+						<span class="skill-badge" id="skill-galaxy">Galaxy Platform</span>
+						<span class="skill-badge" id="skill-cloud">Cloud Computing</span>
+						<span class="skill-badge" id="skill-git">Git Version Control</span>
+						<span class="skill-badge" id="skill-pipelines">CI/CD Workflows</span>
+						<span class="skill-badge" id="skill-ethics">Ethical AI / HIPAA</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects Showcase Section -->
+		<section id="projects" class="section container">
+			<div class="section-header" id="projects-header">
+				<span class="section-subtitle">Computational Results</span>
+				<h2 class="section-title">Projects Showcase</h2>
+				<p class="section-desc">
+					Explore my code repositories, pipeline developments, and clinical analytics platforms.
+				</p>
+			</div>
+
+			<div class="projects-grid" id="projects-showcase-grid">
+				
+				<!-- FEATURED PROJECT (FIRST ITEM): In Silico Characterization of protein -->
+				<article class="glass-card featured-project" id="project-featured-silico">
+					<div class="project-visual" id="featured-visual-area">
+						<div class="protein-svg-container" id="protein-svg-box">
+							<!-- Stunning inline SVG visual representing molecular protein structure & DNA helix overlay -->
+							<svg viewBox="0 0 400 250" class="dna-helix-bg" xmlns="http://www.w3.org/2000/svg">
+							  <defs>
+								<linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+								  <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8"/>
+								  <stop offset="100%" stop-color="#4facfe" stop-opacity="0.8"/>
+								</linearGradient>
+								<linearGradient id="grad-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+								  <stop offset="0%" stop-color="#b887fc" stop-opacity="0.8"/>
+								  <stop offset="100%" stop-color="#a18cd1" stop-opacity="0.8"/>
+								</linearGradient>
+								<filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+								  <feGaussianBlur stdDeviation="6" result="blur" />
+								  <feMerge>
+									<feMergeNode in="blur" />
+									<feMergeNode in="SourceGraphic" />
+								  </feMerge>
+								</filter>
+							  </defs>
+							  
+							  <path d="M 20 20 L 380 20 L 380 230 L 20 230 Z" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+							  <line x1="50" y1="20" x2="50" y2="230" stroke="rgba(255,255,255,0.015)" />
+							  <line x1="100" y1="20" x2="100" y2="230" stroke="rgba(255,255,255,0.015)" />
+							  <line x1="150" y1="20" x2="150" y2="230" stroke="rgba(255,255,255,0.015)" />
+							  <line x1="200" y1="20" x2="200" y2="230" stroke="rgba(255,255,255,0.015)" />
+							  <line x1="250" y1="20" x2="250" y2="230" stroke="rgba(255,255,255,0.015)" />
+							  <line x1="300" y1="20" x2="300" y2="230" stroke="rgba(255,255,255,0.015)" />
+							  <line x1="350" y1="20" x2="350" y2="230" stroke="rgba(255,255,255,0.015)" />
+							  
+							  <path d="M 40,190 Q 70,140 100,190 T 160,190 T 220,190 T 280,190 T 340,190" fill="none" stroke="url(#grad-cyan)" stroke-width="2.5" opacity="0.3"/>
+							  <path d="M 40,150 Q 70,200 100,150 T 160,150 T 220,150 T 280,150 T 340,150" fill="none" stroke="url(#grad-violet)" stroke-width="2.5" opacity="0.3"/>
+							  
+							  <line x1="70" y1="155" x2="70" y2="185" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+							  <line x1="130" y1="155" x2="130" y2="185" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+							  <line x1="190" y1="155" x2="190" y2="185" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+							  <line x1="250" y1="155" x2="250" y2="185" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+							  <line x1="310" y1="155" x2="310" y2="185" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+
+							  <path d="M 70,70 C 110,35 150,155 190,95 C 230,35 270,145 310,65" fill="none" stroke="url(#grad-cyan)" stroke-width="6.5" stroke-linecap="round" filter="url(#glow)"/>
+							  <path d="M 80,95 C 120,115 160,45 200,125 C 240,205 280,85 320,125" fill="none" stroke="url(#grad-violet)" stroke-width="4.5" stroke-linecap="round" filter="url(#glow)"/>
+
+							  <circle cx="110" cy="55" r="7.5" fill="#00f2fe" filter="url(#glow)"/>
+							  <circle cx="190" cy="95" r="6" fill="#a18cd1" filter="url(#glow)"/>
+							  <circle cx="270" cy="105" r="8" fill="#4facfe" filter="url(#glow)"/>
+							  <circle cx="150" cy="130" r="5" fill="#fff" opacity="0.95"/>
+							  <circle cx="230" cy="125" r="6" fill="#00f2fe" filter="url(#glow)"/>
+							  <circle cx="300" cy="75" r="5" fill="#a18cd1"/>
+
+							  <line x1="110" y1="55" x2="150" y2="130" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-dasharray="3,3" />
+							  <line x1="190" y1="95" x2="150" y2="130" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" />
+							  <line x1="190" y1="95" x2="230" y2="125" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" />
+							  <line x1="270" y1="105" x2="230" y2="125" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-dasharray="3,3" />
+
+							  <text x="30" y="45" fill="rgba(0, 242, 254, 0.45)" font-family="monospace" font-size="9">PDB REF: 8P4X</text>
+							  <text x="30" y="60" fill="rgba(255, 255, 255, 0.35)" font-family="monospace" font-size="8">SIMILARITY ALIGN: 99.8%</text>
+							  <text x="260" y="215" fill="rgba(161, 140, 209, 0.55)" font-family="monospace" font-size="9">E-VALUE: 2e-152</text>
+							</svg>
+						</div>
+					</div>
+					<div class="project-content" id="featured-content-area">
+						<span class="project-tag" id="tag-featured">Featured Project</span>
+						<h3 class="project-title" id="title-featured-project">
+							<a href="https://github.com/Ceefour18/In_Silico_Characterization_protein" target="_blank" rel="noopener">
+								In Silico Characterization of Protein
+							</a>
+						</h3>
+						<p class="project-desc" id="desc-featured-project">
+							An advanced computational biology project detailing molecular profiling, conserved domain identification, sequence alignment, and in silico structural characterization of target proteins. Fully leverages databases like NCBI and tools like BLAST and MEGA for precise sequence characterization and structural-functional inference.
+						</p>
+						<div class="project-footer">
+							<a href="https://github.com/Ceefour18/In_Silico_Characterization_protein" class="project-link" id="link-featured-project" target="_blank" rel="noopener">
+								View Repository
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+							</a>
+						</div>
+					</div>
+				</article>
+
+				<!-- PROJECT 2: Predicting mortality using logistic regression -->
+				<article class="glass-card project-card" id="project-mortality-prediction">
+					<div class="project-visual">
+						<img src="images/Logistic.jpeg" alt="Logistic Regression Curve Chart" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%230f172a\'><rect width=\'100\' height=\'100\'/><path d=\'M10,80 Q50,20 90,20\' fill=\'none\' stroke=\'%23a18cd1\' stroke-width=\'4\'/></svg>'" />
+					</div>
+					<span class="project-tag">Biostatistics</span>
+					<h3 class="project-title">
+						<a href="https://github.com/Ceefour18/Predicting-mortality-using-logistic-regression" target="_blank" rel="noopener">
+							Predicting Mortality Risk via Logistic Regression
+						</a>
+					</h3>
+					<p class="project-desc">
+						Designed and implemented a predictive model using logistic regression to evaluate mortality risk factors in clinical patient sets, supporting healthcare risk-prioritization and clinical decision workflows.
+					</p>
+					<div class="project-footer">
+						<a href="https://github.com/Ceefour18/Predicting-mortality-using-logistic-regression" class="project-link" target="_blank" rel="noopener">
+							View Project
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
+					</div>
+				</article>
+
+				<!-- PROJECT 3: Exploratory data analysis using python -->
+				<article class="glass-card project-card" id="project-cancer-eda">
+					<div class="project-visual">
+						<img src="images/explore2.jpeg" alt="Python Exploratory Data Analysis Plots" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%230f172a\'><rect width=\'100\' height=\'100\'/><circle cx=\'30\' cy=\'40\' r=\'10\' fill=\'%2300f2fe\'/><circle cx=\'70\' cy=\'60\' r=\'15\' fill=\'%234facfe\'/></svg>'" />
+					</div>
+					<span class="project-tag">Data Science</span>
+					<h3 class="project-title">
+						<a href="https://github.com/Ceefour18/Cancer_Exploratory" target="_blank" rel="noopener">
+							Exploratory Data Analysis using Python
+						</a>
+					</h3>
+					<p class="project-desc">
+						Rigorous clinical dataset parsing, missing value treatment, outlier filtering, and multivariate visualization using Python to uncover underlying trends in clinical cohorts.
+					</p>
+					<div class="project-footer">
+						<a href="https://github.com/Ceefour18/Cancer_Exploratory" class="project-link" target="_blank" rel="noopener">
+							View Project
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
+					</div>
+				</article>
+
+				<!-- PROJECT 4: Chatbot for Human metapneumovirus -->
+				<article class="glass-card project-card" id="project-hmpv-chatbot">
+					<div class="project-visual">
+						<img src="images/hmpv.jpeg" alt="hMPV Chatbot Interface View" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%230f172a\'><rect width=\'100\' height=\'100\'/><rect x=\'20\' y=\'30\' width=\'60\' height=\'40\' rx=\'5\' fill=\'%2300f2fe\'/><circle cx=\'40\' cy=\'50\' r=\'4\' fill=\'%23000\'/><circle cx=\'60\' cy=\'50\' r=\'4\' fill=\'%23000\'/></svg>'" />
+					</div>
+					<span class="project-tag">Healthcare AI</span>
+					<h3 class="project-title">
+						<a href="https://github.com/Ceefour18/HMPV" target="_blank" rel="noopener">
+							RAG-Powered Chatbot for hMPV
+						</a>
+					</h3>
+					<p class="project-desc">
+						An interactive AI chatbot designed to deliver highly accurate medical context on the Human Metapneumovirus. Leverages LLM integration and retrieval-augmented generation (RAG) to ensure clinical validity.
+					</p>
+					<div class="project-footer">
+						<a href="https://github.com/Ceefour18/HMPV" class="project-link" target="_blank" rel="noopener">
+							View Project
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
+					</div>
+				</article>
+
+				<!-- PROJECT 5: Streamlit web interface -->
+				<article class="glass-card project-card" id="project-streamlit-app">
+					<div class="project-visual">
+						<img src="images/streamlit.jpg" alt="Streamlit Web Application dashboard" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%230f172a\'><rect width=\'100\' height=\'100\'/><polygon points=\'50,20 20,80 80,80\' fill=\'%23ff4b4b\'/></svg>'" />
+					</div>
+					<span class="project-tag">Web Interfaces</span>
+					<h3 class="project-title">
+						<a href="https://github.com/Ceefour18/Streamlitapp" target="_blank" rel="noopener">
+							Interactive Streamlit Web Dashboard
+						</a>
+					</h3>
+					<p class="project-desc">
+						Developed a fully dynamic Streamlit web application to highlight biomedical data science projects, providing users and clinical researchers with an interactive platform to explore analytics.
+					</p>
+					<div class="project-footer">
+						<a href="https://github.com/Ceefour18/Streamlitapp" class="project-link" target="_blank" rel="noopener">
+							View Project
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
+					</div>
+				</article>
+
+				<!-- PROJECT 6: Peer-reviewed Publications -->
+				<article class="glass-card project-card" id="project-publications">
+					<div class="project-visual">
+						<img src="images/journals.jpg" alt="Scientific Peer Reviewed Journals cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%230f172a\'><rect width=\'100\' height=\'100\'/><path d=\'M30,20 L70,20 L70,80 L30,80 Z\' fill=\'%234facfe\'/><line x1=\'38\' y1=\'35\' x2=\'62\' y2=\'35\' stroke=\'%23000\' stroke-width=\'2\'/></svg>'" />
+					</div>
+					<span class="project-tag">Research</span>
+					<h3 class="project-title">
+						<a href="https://github.com/Ceefour18/Peer-reviewed-Publication" target="_blank" rel="noopener">
+							Publications in Peer-Reviewed Journals
+						</a>
+					</h3>
+					<p class="project-desc">
+						Co-authored academic papers and scientific articles published in peer-reviewed journals, focusing on medical biostatistics, epidemiology, and digital healthcare.
+					</p>
+					<div class="project-footer">
+						<a href="https://github.com/Ceefour18/Peer-reviewed-Publication" class="project-link" target="_blank" rel="noopener">
+							Explore Publications
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
+					</div>
+				</article>
+
+				<!-- PROJECT 7: Beats by Dre Consumer Insights -->
+				<article class="glass-card project-card" id="project-consumer-insights">
+					<div class="project-visual">
+						<img src="images/Image12.jpg" alt="Beats By Dre headphones close-up" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%230f172a\'><rect width=\'100\' height=\'100\'/><circle cx=\'50\' cy=\'50\' r=\'25\' fill=\'%23e11d48\'/></svg>'" />
+					</div>
+					<span class="project-tag">Consumer Analytics</span>
+					<h3 class="project-title">
+						<a href="https://github.com/Ceefour18/Beats-by-Dre-Consumer-Insights/blob/main/Copy_of_Beats_by_Dre_Consumer_Insights_Capstone_Project_Template.ipynb" target="_blank" rel="noopener">
+							Beats by Dre Consumer Insights Study
+						</a>
+					</h3>
+					<p class="project-desc">
+						An extensive NLP and sentiment analysis study harvesting and comparing customer feedback and Amazon reviews for audio speakers within similar price tiers.
+					</p>
+					<div class="project-footer">
+						<a href="https://github.com/Ceefour18/Beats-by-Dre-Consumer-Insights/blob/main/Copy_of_Beats_by_Dre_Consumer_Insights_Capstone_Project_Template.ipynb" class="project-link" target="_blank" rel="noopener">
+							View Notebook
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
+					</div>
+				</article>
+
+				<!-- PROJECT 8: Clinical data analysis highlights -->
+				<article class="glass-card project-card" id="project-analysis-highlights">
+					<div class="project-visual">
+						<img src="images/presentation.jpg" alt="Data tables and charts slides" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%230f172a\'><rect width=\'100\' height=\'100\'/><rect x=\'20\' y=\'25\' width=\'60\' height=\'40\' fill=\'%230284c7\'/><line x1=\'50\' y1=\'65\' x2=\'50\' y2=\'85\' stroke=\'%23fff\' stroke-width=\'4\'/></svg>'" />
+					</div>
+					<span class="project-tag">Biostatistics</span>
+					<h3 class="project-title">
+						<a href="https://github.com/Ceefour18/Analysis-Highlight" target="_blank" rel="noopener">
+							Clinical Data Analysis & Presentations
+						</a>
+					</h3>
+					<p class="project-desc">
+						Curated repository containing descriptive and inferential biostatistics research highlights, complete with structured result interpretation slides, data tables, and diagrams.
+					</p>
+					<div class="project-footer">
+						<a href="https://github.com/Ceefour18/Analysis-Highlight" class="project-link" target="_blank" rel="noopener">
+							View Project
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
+					</div>
+				</article>
+
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section id="contact" class="section">
+			<div class="container contact-wrapper">
+				<div class="contact-info" id="contact-details-box">
+					<h2 class="contact-title" id="contact-hdr-text">Let's Collaborate</h2>
+					<p class="contact-text" id="contact-intro-p">
+						I am interested in research collaborations, clinical data engineering projects, pipeline integrations, and bioinformatics consulting. Feel free to reach out!
+					</p>
+					
+					<div class="contact-methods" id="contact-methods-group">
+						<!-- Address -->
+						<div class="contact-item" id="contact-item-address">
+							<div class="contact-icon">
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+							</div>
+							<div class="contact-content">
+								<h4>Location</h4>
+								<p>Lagos, Nigeria</p>
+							</div>
+						</div>
+						
+						<!-- Phone -->
+						<div class="contact-item" id="contact-item-phone">
+							<div class="contact-icon">
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+							</div>
+							<div class="contact-content">
+								<h4>Phone</h4>
+								<p><a href="tel:+2348174226011">(234) 817-422-6011</a></p>
+							</div>
+						</div>
+						
+						<!-- Email -->
+						<div class="contact-item" id="contact-item-email">
+							<div class="contact-icon">
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+							</div>
+							<div class="contact-content">
+								<h4>Email</h4>
+								<p><a href="mailto:ceefourme@gmail.com">ceefourme@gmail.com</a></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="contact-social-box" id="social-networks-box">
+						<h3>Social Channels</h3>
+						<div class="social-links">
+							<a href="https://github.com/Ceefour18" class="social-btn" id="social-github-btn" target="_blank" rel="noopener" aria-label="GitHub Profile">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+							</a>
+							<a href="https://www.linkedin.com/in/clement-akinsola/" class="social-btn" id="social-linkedin-btn" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+							</a>
+							<a href="https://x.com/ceefourme" class="social-btn" id="social-twitter-btn" target="_blank" rel="noopener" aria-label="Twitter Profile">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="glass-card contact-card-form" id="contact-form-box">
+					<form action="#" method="post" id="portfolio-contact-form" onsubmit="event.preventDefault(); alert('Thank you for your message! This is a demo form, but Ceefour will be notified.');">
+						<div class="form-group" id="group-name">
+							<label for="form-input-name" class="form-label">Full Name</label>
+							<input type="text" id="form-input-name" name="name" class="form-input" placeholder="Dr. John Doe" required />
+						</div>
+						
+						<div class="form-group" id="group-email">
+							<label for="form-input-email" class="form-label">Email Address</label>
+							<input type="email" id="form-input-email" name="email" class="form-input" placeholder="john.doe@institution.edu" required />
+						</div>
+						
+						<div class="form-group" id="group-message">
+							<label for="form-input-message" class="form-label">Message Details</label>
+							<textarea id="form-input-message" name="message" class="form-input" placeholder="Describe your research inquiry, pipeline project, or collaboration details..." required></textarea>
+						</div>
+						
+						<button type="submit" class="btn btn-primary btn-submit" id="form-submit-btn">Send Inquiry</button>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer class="main-footer">
+		<div class="container footer-container">
+			<div class="footer-copy" id="footer-copyright-label">
+				&copy; 2026 Clement Akinsola (Ceefour). All rights reserved.
+			</div>
+			<div class="footer-design" id="footer-template-label">
+				Refined with 💙 by Antigravity
+			</div>
+		</div>
+	</footer>
+
+	<!-- Interactive Mobile Navigation Toggle Script -->
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+			const navigationMenu = document.getElementById('navigation-menu');
+
+			// Responsive mobile drawer toggle
+			if (mobileMenuBtn && navigationMenu) {
+				mobileMenuBtn.addEventListener('click', () => {
+					const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+					mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+					
+					// Basic toggle logic
+					if (navigationMenu.style.display === 'flex') {
+						navigationMenu.style.display = '';
+						mobileMenuBtn.style.color = '';
+					} else {
+						navigationMenu.style.display = 'flex';
+						navigationMenu.style.flexDirection = 'column';
+						navigationMenu.style.position = 'absolute';
+						navigationMenu.style.top = '4.5rem';
+						navigationMenu.style.left = '0';
+						navigationMenu.style.width = '100%';
+						navigationMenu.style.background = 'rgba(6, 9, 19, 0.95)';
+						navigationMenu.style.backdropFilter = 'blur(20px)';
+						navigationMenu.style.padding = '2rem';
+						navigationMenu.style.borderBottom = '1px solid rgba(255,255,255,0.08)';
+						navigationMenu.style.gap = '1.5rem';
+						mobileMenuBtn.style.color = 'var(--cyan-glow)';
+					}
+				});
+
+				// Close menu on link click
+				const menuLinks = navigationMenu.querySelectorAll('a');
+				menuLinks.forEach(link => {
+					link.addEventListener('click', () => {
+						if (window.innerWidth <= 768) {
+							navigationMenu.style.display = '';
+							mobileMenuBtn.setAttribute('aria-expanded', 'false');
+							mobileMenuBtn.style.color = '';
+						}
+					});
+				});
+			}
+			
+			// Header sticky scroll effect
+			const mainHeader = document.getElementById('main-header');
+			window.addEventListener('scroll', () => {
+				if (window.scrollY > 50) {
+					mainHeader.style.padding = '0.5rem 0';
+					mainHeader.style.background = 'rgba(6, 9, 19, 0.9)';
+					mainHeader.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
+				} else {
+					mainHeader.style.padding = '';
+					mainHeader.style.background = 'rgba(6, 9, 19, 0.7)';
+					mainHeader.style.boxShadow = '';
+				}
+			});
+		});
+	</script>
+</body>
+
 </html>
