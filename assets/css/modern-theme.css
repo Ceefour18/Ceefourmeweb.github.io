@@ -878,6 +878,332 @@ section.section {
   opacity: 0.15;
 }
 
+/* Hero badges row */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-badge.relocation-badge {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.25);
+  color: var(--emerald-glow);
+}
+
+.btn-cv {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 242, 254, 0.35);
+  color: var(--text-primary);
+}
+
+.btn-cv:hover {
+  background: rgba(0, 242, 254, 0.1);
+  border-color: var(--cyan-glow);
+}
+
+.nav-cv-link {
+  color: var(--cyan-glow) !important;
+  font-weight: 600;
+}
+
+/* Project impact metrics */
+.project-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.metric-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--font-title);
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  color: var(--cyan-glow);
+}
+
+.metric-chip.highlight {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--emerald-glow);
+}
+
+.project-link-secondary {
+  margin-left: 1rem;
+  opacity: 0.85;
+}
+
+/* Currently Building section */
+#building {
+  position: relative;
+}
+
+.building-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.building-card {
+  padding: 2rem;
+  border-left: 3px solid var(--violet-glow);
+}
+
+.building-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.building-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--violet-glow);
+  margin-bottom: 1rem;
+}
+
+.building-status .pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--violet-glow);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* Other projects subsection */
+.projects-subsection {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.projects-subsection .section-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.projects-subsection .section-title {
+  font-size: 1.75rem;
+}
+
+.other-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.other-projects-grid .project-card {
+  padding: 1.5rem;
+}
+
+.other-projects-grid .project-visual {
+  aspect-ratio: 16/9;
+  margin-bottom: 1rem;
+}
+
+/* Case study page */
+.case-study-page {
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+}
+
+.case-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  transition: var(--transition);
+}
+
+.case-back-link:hover {
+  color: var(--cyan-glow);
+}
+
+.case-hero {
+  margin-bottom: 3rem;
+}
+
+.case-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.case-hero .case-subtitle {
+  font-size: 1.15rem;
+  max-width: 720px;
+  margin-bottom: 1.5rem;
+}
+
+.case-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.case-metric-box {
+  padding: 1.25rem;
+  border-radius: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.case-metric-box .value {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--cyan-glow);
+  line-height: 1.2;
+}
+
+.case-metric-box .label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.case-section {
+  margin-bottom: 3rem;
+}
+
+.case-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.case-section p,
+.case-section li {
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.case-section ul {
+  padding-left: 1.25rem;
+}
+
+.case-tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.case-challenge-box {
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  background: rgba(161, 140, 209, 0.06);
+  border: 1px solid rgba(161, 140, 209, 0.2);
+  margin-top: 1rem;
+}
+
+.case-challenge-box h3 {
+  font-size: 1.1rem;
+  color: var(--violet-glow);
+  margin-bottom: 0.75rem;
+}
+
+.case-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+/* CV page */
+.cv-page {
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+  max-width: 800px;
+}
+
+.cv-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.cv-content {
+  padding: 2.5rem;
+  line-height: 1.7;
+}
+
+.cv-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  -webkit-text-fill-color: var(--text-primary);
+  background: none;
+}
+
+.cv-content h2 {
+  font-size: 1.15rem;
+  color: var(--cyan-glow);
+  margin: 1.75rem 0 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.35rem;
+}
+
+.cv-content h3 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin: 1rem 0 0.35rem;
+}
+
+@media print {
+  header, footer, .cv-actions, .case-back-link, .glowing-blob {
+    display: none !important;
+  }
+  body { background: white; color: black; }
+  .cv-content, .glass-card { background: white; border: none; box-shadow: none; }
+  .cv-content h2 { color: #0369a1; }
+  .cv-content p, .cv-content li { color: #333; }
+}
+
+/* Contact — single column when no form */
+.contact-wrapper.single-column {
+  grid-template-columns: 1fr;
+  max-width: 640px;
+}
+
+.contact-cta-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
 /* Contact & Footer Section */
 #contact {
   background: radial-gradient(100% 100% at 50% 100%, rgba(13, 20, 38, 0.8) 0%, rgba(6, 9, 19, 1) 100%);

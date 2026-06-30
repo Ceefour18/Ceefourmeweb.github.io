@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>CV — Clement Akinsola | Ceefour</title>
+	<link rel="stylesheet" href="assets/css/modern-theme.css" />
+</head>
+<body>
+	<header id="main-header">
+		<div class="container nav-container">
+			<a href="index.html" class="logo-text">CEEFOUR</a>
+			<nav>
+				<ul class="nav-links">
+					<li><a href="index.html">Portfolio</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="container cv-page">
+		<div class="cv-actions">
+			<button type="button" class="btn btn-primary" onclick="window.print()">
+				Save as PDF / Print
+			</button>
+			<a href="index.html" class="btn btn-secondary">Back to Portfolio</a>
+		</div>
+
+		<article class="glass-card cv-content">
+			<h1>Clement Akinsola</h1>
+			<p><strong>Clinical Data Scientist &amp; Bioinformatician</strong> · Lagos, Nigeria</p>
+			<p>
+				<a href="mailto:ceefourme@gmail.com">ceefourme@gmail.com</a> ·
+				<a href="https://www.linkedin.com/in/clement-akinsola/" target="_blank" rel="noopener">LinkedIn</a> ·
+				<a href="https://github.com/Ceefour18" target="_blank" rel="noopener">GitHub</a>
+			</p>
+			<p><em>Open to relocation / remote — UK, CH, DE, NL</em></p>
+
+			<h2>Summary</h2>
+			<p>
+				Clinical bioinformatician specialising in cancer genomics — WES/WGS somatic variant calling (GATK4/Mutect2), RNA-seq, and multi-omics integration. Built Docker-based pipelines validated against SEQC2 gold-standard truth sets (ROC AUC 0.974). Focused on precision oncology and reproducible computational workflows.
+			</p>
+
+			<h2>Selected Projects</h2>
+			<h3>HCC1395 Somatic WGS Pipeline — SEQC2 Benchmark</h3>
+			<p>
+				Tumour-normal WGS pipeline (BWA-MEM → BQSR → Mutect2) on AWS; validated against SEQC2 v1.2 truth set (AUC 0.974). Debugged FASTQ read-name mismatches; reduced runtime ~3× via Colab migration.
+			</p>
+			<h3>Somatic WES Breast Cancer Pipeline (GATK4)</h3>
+			<p>
+				Docker GATK4 pipeline on HCC1143 WES: 182 → 27 PASS variants; clonal TP53 p.Arg248Gln (VAF 98.6%); COSMIC mutational signatures; 1.11% contamination.
+			</p>
+			<h3>TP53 Cancer Genomics</h3>
+			<p>
+				Processed 2,319 ClinVar variants; 335 pathogenic; 99.46% BLAST identity to NM_000546.6 reference.
+			</p>
+
+			<h2>Technical Skills</h2>
+			<p>
+				<strong>Bioinformatics:</strong> GATK4, Mutect2, BWA, SAMtools, SnpEff, FastQC, Docker, Nextflow (in progress), WES/WGS, RNA-seq<br />
+				<strong>Programming:</strong> Python, R, Bash, SQL<br />
+				<strong>Cloud:</strong> AWS EC2, Google Colab, CI/CD<br />
+				<strong>Domains:</strong> Somatic variant calling, mutational signatures, clinical genomics, biostatistics
+			</p>
+
+			<h2>Education &amp; Publications</h2>
+			<p>Co-authored peer-reviewed publications in medical biostatistics, epidemiology, and digital healthcare. See <a href="https://github.com/Ceefour18/Peer-reviewed-Publication" target="_blank" rel="noopener">publications repository</a>.</p>
+		</article>
+	</main>
+
+	<footer class="main-footer">
+		<div class="container footer-container">
+			<div class="footer-copy">&copy; 2026 Clement Akinsola (Ceefour). All rights reserved.</div>
+		</div>
+	</footer>
+</body>
+</html>
