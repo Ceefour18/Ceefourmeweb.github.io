@@ -40,8 +40,8 @@
 
 			<div class="case-metrics-row">
 				<div class="case-metric-box glass-card">
-					<span class="value">0.974</span>
-					<span class="label">ROC AUC (SEQC2 validation)</span>
+					<span class="value">SEQC2</span>
+					<span class="label">Gold-standard benchmark</span>
 				</div>
 				<div class="case-metric-box glass-card">
 					<span class="value">~3×</span>
@@ -118,18 +118,13 @@
 		<section class="case-section glass-card" style="padding: 2rem; margin-top: 1.5rem;">
 			<h2>Results</h2>
 			<ul>
-				<li><strong>ROC AUC = 0.974</strong> on hold-out validation against the SEQC2 high-confidence somatic SNV truth set in HC regions</li>
-				<li>Pipeline validated with sensitivity/precision profiling against SEQC2 v1.2 PASS-labelled variants in benchmark regions</li>
+				<li>Validated somatic calls against the <strong>SEQC2 v1.2 high-confidence truth set</strong> (HCC1395/HCC1395BL) in benchmark HC regions — sensitivity/precision profiling against PASS-labelled variants</li>
 				<li>Full tumour-normal WGS workflow automated from FASTQ → filtered VCF with reproducible Docker mounts</li>
-				<li>Runtime reduced ~3× (48 h → ~14 h) by migrating compute-heavy stages to Colab Pro+</li>
+				<li>Runtime reduced ~3× (~48 h → ~14 h) by migrating compute-heavy stages to Colab Pro+</li>
 				<li>Complementary WES pipeline (HCC1143/chr17) independently recovered clonal TP53 p.Arg248Gln at 98.6% VAF with 1.11% cross-sample contamination</li>
 			</ul>
 
 			<div class="case-metrics-row" style="margin-top: 1.5rem;">
-				<div class="case-metric-box">
-					<span class="value">0.974</span>
-					<span class="label">Validation AUC</span>
-				</div>
 				<div class="case-metric-box">
 					<span class="value">~14h</span>
 					<span class="label">Colab runtime</span>
@@ -137,6 +132,10 @@
 				<div class="case-metric-box">
 					<span class="value">128 GB</span>
 					<span class="label">Peak RAM (BQSR)</span>
+				</div>
+				<div class="case-metric-box">
+					<span class="value">GATK 4.6</span>
+					<span class="label">Mutect2 calling</span>
 				</div>
 			</div>
 		</section>

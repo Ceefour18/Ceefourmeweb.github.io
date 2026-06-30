@@ -1415,3 +1415,110 @@ footer.main-footer {
 .footer-design a:hover {
   color: var(--cyan-glow);
 }
+
+/* ── Hero Stats Bar ── */
+.hero-stats-bar {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 242, 254, 0.04);
+  border: 1px solid rgba(0, 242, 254, 0.12);
+  border-radius: 12px;
+  width: fit-content;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.hero-stat-value {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.hero-stat-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+  white-space: nowrap;
+}
+
+.hero-stat-divider {
+  width: 1px;
+  height: 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .hero-stats-bar {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .hero-stat-divider { display: none; }
+  .hero-stat { padding: 0 0.75rem; }
+}
+
+/* ── Reproducibility signal ── */
+.project-repro {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--emerald-glow);
+  margin-top: 0.6rem;
+  opacity: 0.85;
+}
+
+.project-repro svg {
+  stroke: var(--emerald-glow);
+  flex-shrink: 0;
+}
+
+/* ── Learning badge variant ── */
+.skill-badge.learning-badge {
+  background: rgba(161, 140, 209, 0.08);
+  border-color: rgba(161, 140, 209, 0.25);
+  color: var(--violet-glow);
+}
+
+.skill-badge.learning-badge::after {
+  content: ' ↗';
+  font-size: 0.65em;
+  opacity: 0.7;
+}
+
+/* ── Contact availability line ── */
+.contact-availability {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--emerald-glow);
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.contact-availability svg {
+  stroke: var(--emerald-glow);
+  flex-shrink: 0;
+}
