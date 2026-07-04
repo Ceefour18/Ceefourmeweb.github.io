@@ -683,6 +683,68 @@ section.section {
   transform: translateY(-2px);
 }
 
+/* Skills in Action Matrix */
+.skills-matrix-card {
+  padding: 1.5rem 2rem;
+  overflow-x: auto;
+}
+
+.skills-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.skills-matrix th {
+  text-align: left;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skills-matrix td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+}
+
+.skills-matrix td:first-child {
+  color: var(--text-primary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.skills-matrix tr:last-child td {
+  border-bottom: none;
+}
+
+.skills-matrix tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.skills-matrix td a {
+  color: var(--cyan-glow);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.skills-matrix td a:hover {
+  border-bottom-color: var(--cyan-glow);
+}
+
+@media (max-width: 600px) {
+  .skills-matrix-card {
+    padding: 1rem;
+  }
+  .skills-matrix {
+    font-size: 0.85rem;
+  }
+}
+
 /* Projects Showcase Grid */
 #projects {
   position: relative;

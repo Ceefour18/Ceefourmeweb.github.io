@@ -139,10 +139,10 @@
 			<div class="about-grid" id="about-details-grid">
 				<div class="narrative-box" id="narrative-card">
 					<p>
-						Clinical bioinformatician specializing in cancer genomics — building reproducible WES and WGS somatic variant calling pipelines with GATK4/Mutect2. My work targets clinically relevant breast cancer genes — TP53, BRCA1, ERBB2 — from raw FASTQ through annotated, filtered VCF.
+						Clinical bioinformatician specializing in cancer genomics, building reproducible WES and WGS somatic variant calling pipelines with GATK4/Mutect2. My work targets clinically relevant breast cancer genes, including TP53, BRCA1, and ERBB2, from raw FASTQ through annotated, filtered VCF.
 					</p>
 					<p>
-						Grounded in RNA-seq differential expression analysis, I am now diving into multi-omics integration — bulk RNA-seq, scRNA-seq cell-type deconvolution, and somatic variant landscapes — to build a unified view of breast cancer biology for precision oncology roles.
+						Grounded in RNA-seq differential expression analysis, I'm now extending into multi-omics integration, linking somatic variant calls, bulk transcriptomics, and single-cell profiling into a unified view of tumour biology for precision oncology.
 					</p>
 				</div>
 				
@@ -345,11 +345,6 @@
 					<p>Porting the HCC1395 WGS bash workflow to Nextflow with nf-core conventions — containerised processes, resume support, and HPC/cloud profiles for scalable tumour-normal calling.</p>
 				</div>
 				<div class="glass-card building-card">
-					<div class="building-status"><span class="pulse-dot"></span> In Progress</div>
-					<h3>RNA-seq Differential Expression</h3>
-					<p>Building a STAR → featureCounts → DESeq2 workflow on breast cancer cell-line data to complement WES/WGS variant calls with transcriptomic validation of driver genes.</p>
-				</div>
-				<div class="glass-card building-card">
 					<div class="building-status"><span class="pulse-dot"></span> Planned</div>
 					<h3>Multi-omics Integration Layer</h3>
 					<p>Linking somatic variants, RNA-seq expression, and mutational signatures into a unified reporting module — the T-shaped depth + breadth profile for precision oncology roles.</p>
@@ -359,6 +354,81 @@
 					<h3>scRNA-seq Tumour Microenvironment</h3>
 					<p>Exploring single-cell RNA-seq clustering and cell-type deconvolution with Seurat/Scanpy on breast cancer data — resolving tumour microenvironment heterogeneity to extend the multi-omics layer beyond bulk sequencing.</p>
 				</div>
+			</div>
+		</section>
+
+		<!-- Skills in Action Matrix -->
+		<section id="skills-in-action" class="section container">
+			<div class="section-header">
+				<span class="section-subtitle">Cross-Reference</span>
+				<h2 class="section-title">Skills in Action</h2>
+				<p class="section-desc">
+					Where each core tool actually shows up in the project work — a quick scan instead of reading every card below.
+				</p>
+			</div>
+			<div class="glass-card skills-matrix-card">
+				<table class="skills-matrix">
+					<thead>
+						<tr>
+							<th>Tool</th>
+							<th>Used In</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>GATK4 / Mutect2</td>
+							<td><a href="#project-flagship-wes">Somatic WES Pipeline</a>, <a href="#project-hcc1395-wgs">HCC1395 WGS Pipeline</a></td>
+						</tr>
+						<tr>
+							<td>AWS (Cloud Computing)</td>
+							<td><a href="#project-hcc1395-wgs">HCC1395 WGS Pipeline</a></td>
+						</tr>
+						<tr>
+							<td>DESeq2 / apeglm</td>
+							<td><a href="#project-tcga-brca-rnaseq">TCGA-BRCA RNA-seq Subtype Analysis</a></td>
+						</tr>
+						<tr>
+							<td>BLAST / NCBI</td>
+							<td><a href="#project-tp53">TP53 Cancer Genomics</a>, <a href="#project-silico">In Silico Protein Characterization</a></td>
+						</tr>
+						<tr>
+							<td>Docker</td>
+							<td><a href="#project-flagship-wes">Somatic WES Pipeline</a>, <a href="#project-hcc1395-wgs">HCC1395 WGS Pipeline</a></td>
+						</tr>
+						<tr>
+							<td>FastQC / Trimmomatic / BWA / SAMtools</td>
+							<td><a href="#project-flagship-wes">Somatic WES Pipeline</a>, <a href="#project-hcc1395-wgs">HCC1395 WGS Pipeline</a></td>
+						</tr>
+						<tr>
+							<td>SnpEff</td>
+							<td><a href="#project-flagship-wes">Somatic WES Pipeline</a>, <a href="#project-hcc1395-wgs">HCC1395 WGS Pipeline</a></td>
+						</tr>
+						<tr>
+							<td>Biopython</td>
+							<td><a href="#project-tp53">TP53 Cancer Genomics</a>, <a href="#project-silico">In Silico Protein Characterization</a></td>
+						</tr>
+						<tr>
+							<td>Survival Analysis</td>
+							<td><a href="#project-tcga-brca-rnaseq">TCGA-BRCA RNA-seq Subtype Analysis</a></td>
+						</tr>
+						<tr>
+							<td>Nextflow</td>
+							<td>Nextflow Somatic Pipeline (see Currently Building, above)</td>
+						</tr>
+						<tr>
+							<td>Logistic Regression</td>
+							<td><a href="#project-mortality-prediction">Mortality Risk — Logistic Regression</a></td>
+						</tr>
+						<tr>
+							<td>LLM / RAG</td>
+							<td><a href="#project-hmpv-chatbot">RAG-Powered hMPV Chatbot</a></td>
+						</tr>
+						<tr>
+							<td>Seurat / Scanpy</td>
+							<td>scRNA-seq Tumour Microenvironment (see Currently Building, above)</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</section>
 
@@ -501,6 +571,59 @@
 					</div>
 				</article>
 
+				<!-- TCGA-BRCA RNA-seq -->
+				<article class="glass-card project-card" id="project-tcga-brca-rnaseq">
+					<div class="project-visual">
+						<!-- Volcano plot: Basal-like vs Luminal A differential expression -->
+						<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+							<!-- Axes -->
+							<line x1="30" y1="170" x2="370" y2="170" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+							<line x1="200" y1="20" x2="200" y2="170" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="2,2"/>
+							<text x="200" y="185" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="monospace" font-size="8">log2FC (Basal vs Luminal A)</text>
+							<text x="14" y="100" fill="rgba(255,255,255,0.35)" font-family="monospace" font-size="8" transform="rotate(-90,14,100)">-log10(padj)</text>
+							<!-- Up in Basal-like (right, red) -->
+							<circle cx="240" cy="130" r="2.5" fill="#ff6b6b" opacity="0.7"/>
+							<circle cx="260" cy="100" r="3" fill="#ff6b6b" opacity="0.8"/>
+							<circle cx="285" cy="70" r="3" fill="#ff6b6b" opacity="0.85"/>
+							<circle cx="255" cy="60" r="2.5" fill="#ff6b6b" opacity="0.75"/>
+							<circle cx="300" cy="45" r="4" fill="#ff6b6b" opacity="0.9"/>
+							<circle cx="230" cy="110" r="2" fill="#ff6b6b" opacity="0.6"/>
+							<circle cx="270" cy="85" r="2.5" fill="#ff6b6b" opacity="0.8"/>
+							<circle cx="320" cy="55" r="3" fill="#ff6b6b" opacity="0.85"/>
+							<!-- Up in Luminal A (left, blue) -->
+							<circle cx="160" cy="125" r="2.5" fill="#4facfe" opacity="0.7"/>
+							<circle cx="140" cy="95" r="3" fill="#4facfe" opacity="0.8"/>
+							<circle cx="115" cy="65" r="3" fill="#4facfe" opacity="0.85"/>
+							<circle cx="145" cy="58" r="2.5" fill="#4facfe" opacity="0.75"/>
+							<circle cx="100" cy="42" r="4" fill="#4facfe" opacity="0.9"/>
+							<circle cx="170" cy="108" r="2" fill="#4facfe" opacity="0.6"/>
+							<circle cx="130" cy="80" r="2.5" fill="#4facfe" opacity="0.8"/>
+							<circle cx="80" cy="52" r="3" fill="#4facfe" opacity="0.85"/>
+							<!-- Non-significant noise cluster -->
+							<circle cx="190" cy="160" r="2" fill="rgba(255,255,255,0.2)"/>
+							<circle cx="205" cy="155" r="2" fill="rgba(255,255,255,0.2)"/>
+							<circle cx="175" cy="163" r="1.5" fill="rgba(255,255,255,0.2)"/>
+							<circle cx="215" cy="158" r="2" fill="rgba(255,255,255,0.2)"/>
+							<text x="200" y="14" text-anchor="middle" fill="rgba(79,172,254,0.5)" font-family="monospace" font-size="10">RNA-SEQ · PAM50 SUBTYPE DE · TCGA-BRCA</text>
+						</svg>
+					</div>
+					<span class="project-tag">RNA-seq · TCGA-BRCA</span>
+					<h3 class="project-title">
+						<a href="https://github.com/Ceefour18/tcga-brca-rnaseq" target="_blank" rel="noopener">TCGA-BRCA RNA-seq Subtype Analysis</a>
+					</h3>
+					<div class="project-metrics">
+						<span class="metric-chip">752 tumours</span>
+						<span class="metric-chip">5,346 DEGs</span>
+						<span class="metric-chip">DESeq2 + apeglm</span>
+					</div>
+					<p class="project-desc">
+						PAM50 Basal-like vs Luminal A breast cancer transcriptomics from the TCGA-BRCA cohort (190 vs 562 tumours), from GDC/TCGAbiolinks acquisition through DESeq2 differential expression, GO/KEGG and GSEA enrichment, and Kaplan-Meier/Cox survival modelling. Basal-like tumours upregulate cell cycle and DNA replication genes; Luminal A upregulates hormone and metabolic pathways.
+					</p>
+					<div class="project-footer">
+						<a href="https://github.com/Ceefour18/tcga-brca-rnaseq" class="project-link" target="_blank" rel="noopener">View Project</a>
+					</div>
+				</article>
+
 				<!-- TP53 Genomics -->
 				<article class="glass-card project-card" id="project-tp53">
 					<div class="project-visual">
@@ -640,7 +763,7 @@
 						<a href="https://github.com/Ceefour18/Peer-reviewed-Publication" target="_blank" rel="noopener">Peer-Reviewed Publications</a>
 					</h3>
 					<p class="project-desc">
-						Co-authored papers in medical biostatistics, epidemiology, and digital healthcare — published in <em>BMC Medical Research Methodology</em>, <em>Frontiers in Public Health</em>, and related peer-reviewed journals.
+						Co-authored papers in medical biostatistics, epidemiology, and digital healthcare — published in <em>BMC Medical Research Methodology</em>, <em>Frontiers in Public Health</em>, <em>Ophthalmology Retina</em>, and related peer-reviewed journals. Statistical analysis credit on "Bilateral Anti-VEGF on Same Day — Investigation on Safety in Retinopathy of Prematurity (BASISROP)", a multicenter retrospective study.
 					</p>
 					<div class="project-footer">
 						<a href="https://github.com/Ceefour18/Peer-reviewed-Publication" class="project-link" target="_blank" rel="noopener">Explore Publications</a>
