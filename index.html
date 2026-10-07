@@ -1,1002 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Ceefour | Bioinformatician & Clinical Data Analyst — Cancer Genomics</title>
-
-	<!-- SEO Best Practices -->
-	<meta name="description" content="Portfolio of Ceefour, a bioinformatician with a background in epidemiology and biostatistics, specializing in cancer genomics. Reproducible WES/WGS somatic variant calling pipelines, RNA-seq analysis, multi-omics integration, and peer-reviewed epidemiological research for precision oncology." />
-	<meta name="keywords" content="Bioinformatics, Epidemiology, Biostatistics, Cancer Genomics, Clinical Genomics, WES, WGS, RNA-seq, Multi-omics, Somatic Variant Calling, GATK4, Mutect2, Breast Cancer, Precision Oncology, Public Health, Python, R, Docker" />
-	<meta name="author" content="Ceefour" />
+	<title>Clement Akinsola — Bioinformatician</title>
+	<meta name="description" content="Akinsola Clement Morakinyo — bioinformatician and clinical data scientist in Lagos, Nigeria. Cancer genomics, NGS analysis (WGS, WES, bulk and single-cell RNA-seq) and medical AI model evaluation." />
+	<meta name="keywords" content="Bioinformatics, Cancer Genomics, NGS, WGS, WES, RNA-seq, scRNA-seq, GATK4, Mutect2, Seurat, DESeq2, Nextflow, nf-core, Medical AI, Brain tumour segmentation, Clinical Data Science, Lagos, Nigeria" />
+	<meta name="author" content="Akinsola Clement Morakinyo" />
 	<meta name="robots" content="index, follow" />
-	
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="assets/css/modern-theme.css" />
+	<meta property="og:title" content="Clement Akinsola — Bioinformatician" />
+	<meta property="og:description" content="Cancer genomics, NGS analysis and AI model evaluation. Reproducible, containerised workflows grounded in clinical research." />
+	<meta property="og:type" content="website" />
+	<meta name="theme-color" content="#f5f3ee" />
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6b66'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23fff' text-anchor='middle'%3ECA%3C/text%3E%3C/svg%3E" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/calm.css" />
+	<script src="assets/js/calm.js"></script>
 </head>
-
 <body>
-	<!-- Decorative Glowing Background Blobs -->
-	<div class="glowing-blob blob-1" id="blob-decor-1"></div>
-	<div class="glowing-blob blob-2" id="blob-decor-2"></div>
-	<div class="glowing-blob blob-3" id="blob-decor-3"></div>
+	<a class="skip-link" href="#main">Skip to content</a>
 
-	<!-- Sticky Header & Nav -->
-	<header id="main-header">
-		<div class="container nav-container">
-			<a href="#hero" class="logo-text" id="brand-logo">CEEFOUR</a>
-			
-			<nav>
-				<ul class="nav-links" id="navigation-menu">
-					<li><a href="#about" id="nav-link-about">About</a></li>
-					<li><a href="#competencies" id="nav-link-competencies">Competencies</a></li>
-					<li><a href="#projects" id="nav-link-projects">Projects</a></li>
-					<li><a href="cv.html" class="nav-cv-link" id="nav-link-cv">CV</a></li>
-					<li><a href="#contact" id="nav-link-contact">Contact</a></li>
-				</ul>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a href="#top" class="brand">Clement <span>Akinsola</span></a>
+			<nav class="nav" id="site-nav" aria-label="Main">
+				<a href="#about">About</a>
+				<a href="#experience">Experience</a>
+				<a href="#projects">Projects</a>
+				<a href="#skills">Skills</a>
+				<a href="#publications">Publications</a>
+				<a href="#contact">Contact</a>
+				<a href="cv.html" class="nav-cv">View CV</a>
 			</nav>
-
-			<div class="nav-socials" id="header-socials">
-				<a href="https://github.com/Ceefour18" target="_blank" rel="noopener" aria-label="GitHub Profile" id="social-github-hdr">
-					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-				</a>
-				<a href="https://www.linkedin.com/in/clement-akinsola/" target="_blank" rel="noopener" aria-label="LinkedIn Profile" id="social-linkedin-hdr">
-					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-				</a>
-				<a href="https://x.com/ceefourme" target="_blank" rel="noopener" aria-label="Twitter Profile" id="social-twitter-hdr">
-					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-				</a>
+			<div class="header-actions">
+				<button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch light or dark theme">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+				</button>
+				<button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+				</button>
 			</div>
-			
-			<button class="mobile-nav-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
-				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-			</button>
 		</div>
 	</header>
 
-	<!-- Main Container -->
-	<main>
-		<!-- Hero Section -->
-		<section id="hero" class="container">
-			<div class="hero-wrapper">
-				<div class="hero-content">
-					<div class="hero-badges">
-						<div class="hero-badge" id="hero-status-badge">
-							<span class="pulse-dot"></span>
-							Cancer Bioinformatics &amp; Clinical Data Analysis
+	<main id="main">
+		<!-- Hero -->
+		<section class="hero" id="top">
+			<div class="container">
+				<div class="hero-grid">
+					<div>
+						<div class="eyebrow"><span class="dot" aria-hidden="true"></span>Bioinformatician · Lagos, Nigeria</div>
+						<h1>Akinsola Clement <em>Morakinyo</em></h1>
+						<p class="role">Cancer genomics, NGS analysis &amp; AI model evaluation</p>
+						<p class="lede">
+							I turn raw sequencing and clinical data into reproducible, well-documented results — from tumour–normal variant calling and single-cell transcriptomics to evaluating medical AI models on African data.
+						</p>
+						<div class="hero-actions">
+							<a href="assets/Akinsola_Clement_Morakinyo_CV.pdf" class="btn btn-primary" download>
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+								Download CV (PDF)
+							</a>
+							<a href="#projects" class="btn btn-ghost">See my work</a>
 						</div>
 					</div>
-					<h1 class="hero-title" id="main-portfolio-title">
-						Ceefour
-						<span>Clinical Data Scientist & Bioinformatician</span>
-					</h1>
-					<p class="hero-desc" id="hero-tagline">
-						Bioinformatician grounded in epidemiology and biostatistics, specializing in cancer genomics — building reproducible WES and WGS pipelines, RNA-seq workflows, and multi-omics analyses, backed by peer-reviewed public health research.
-					</p>
-					<div class="hero-actions" id="hero-cta-buttons">
-						<a href="cv.html" class="btn btn-cv" id="btn-download-cv" target="_blank" rel="noopener">
-							Download CV
-							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-						</a>
-						<a href="#contact" class="btn btn-secondary" id="btn-get-touch">Get In Touch</a>
-					</div>
+
+					<aside class="hero-card" aria-label="At a glance">
+						<h2>At a glance</h2>
+						<ul class="facts">
+							<li>
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+								<span><strong>Now:</strong> Research Intern, Medical Artificial Intelligence Laboratory (MAI Lab), Lagos</span>
+							</li>
+							<li>
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c0 6 10 6 10 12s-10 6-10 6"/><path d="M17 3c0 6-10 6-10 12"/><path d="M8 7h8M8 17h8"/></svg>
+								<span><strong>Focus:</strong> WGS/WES somatic calling, bulk &amp; single-cell RNA-seq, spatial transcriptomics (in progress)</span>
+							</li>
+							<li>
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
+								<span><strong>Studying:</strong> MSc Cell &amp; Molecular Biology, University of Lagos (2027)</span>
+							</li>
+							<li>
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+								<span><strong>Open to:</strong> bioinformatics roles and research collaborations — remote or relocation</span>
+							</li>
+						</ul>
+					</aside>
 				</div>
-				
-				<div class="hero-visual" id="hero-avatar-area">
-					<div class="profile-container">
-						<div class="profile-glow" id="avatar-backdrop-glow"></div>
-						<div class="profile-card" id="avatar-card">
-							<!-- Profile image -->
-							<img src="images/Image_2.jpg" alt="Ceefour Portrait" id="profile-img" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%230f172a\'><rect width=\'100\' height=\'100\'/><circle cx=\'50\' cy=\'40\' r=\'20\' fill=\'%2338bdf8\'/><path d=\'M20,80 Q50,55 80,80\' fill=\'%2338bdf8\'/></svg>'" />
-						</div>
-					</div>
+
+				<div class="stats" aria-label="Highlights">
+					<div class="stat"><div class="num">2016</div><div class="lbl">Clinical data science since</div></div>
+					<div class="stat"><div class="num">7</div><div class="lbl">Peer-reviewed publications</div></div>
+					<div class="stat"><div class="num">150+</div><div class="lbl">Fellowship candidates trained</div></div>
+					<div class="stat"><div class="num">5</div><div class="lbl">Open-source NGS pipelines</div></div>
 				</div>
 			</div>
 		</section>
 
-		<!-- About & Domain Focus Section -->
-		<section id="about" class="section container">
-			<div class="section-header" id="about-section-header">
-				<span class="section-subtitle">About Me</span>
-				<h2 class="section-title">Clinical Genomics & Cancer Bioinformatics</h2>
-				<p class="section-desc">
-					From raw sequencing data to clinically interpretable variant calls.
-				</p>
-			</div>
-			
-			<div class="about-grid" id="about-details-grid">
-				<div class="narrative-box" id="narrative-card">
-					<p>
-						Clinical bioinformatician specializing in cancer genomics, building reproducible WES and WGS somatic variant calling pipelines with GATK4/Mutect2. My work targets clinically relevant breast cancer genes, including TP53, BRCA1, and ERBB2, from raw FASTQ through annotated, filtered VCF.
-					</p>
-					<p>
-						Grounded in RNA-seq differential expression analysis, I'm now extending into multi-omics integration, linking somatic variant calls, bulk transcriptomics, and single-cell profiling into a unified view of tumour biology for precision oncology.
-					</p>
-				</div>
-				
-				<div class="focus-box" id="domain-focus-card">
-					<h3>Domain Focus</h3>
-					<div class="focus-grid" id="focus-capsules-grid">
-						<div class="focus-tag" id="focus-tag-1">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2.5 3.19-2.5 5.5h20c0-2.31-1-4.24-2.5-5.5"></path><path d="M12 2C6.5 2 2 6.5 2 12c0 2.31.79 4.45 2.1 6.17C5.7 16.5 8.65 15.5 12 15.5s6.3.99 7.9 2.67C21.21 16.45 22 14.31 22 12c0-5.5-4.5-10-10-10z"></path></svg>
-							<span>Cancer Genomics</span>
-						</div>
-						<div class="focus-tag" id="focus-tag-2">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
-							<span>WES / WGS Pipelines</span>
-						</div>
-						<div class="focus-tag" id="focus-tag-3">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-							<span>RNA-seq Analysis</span>
-						</div>
-						<div class="focus-tag" id="focus-tag-4">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line></svg>
-							<span>Multi-omics</span>
-						</div>
-						<div class="focus-tag" id="focus-tag-5">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-							<span>Somatic Variant Calling</span>
-						</div>
-						<div class="focus-tag" id="focus-tag-6">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"></circle><circle cx="12" cy="19" r="3"></circle><circle cx="5" cy="12" r="3"></circle><circle cx="19" cy="12" r="3"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-							<span>Precision Oncology</span>
+		<!-- About -->
+		<section class="section alt" id="about">
+			<div class="container reveal">
+				<div class="about-grid">
+					<div class="section-label">About</div>
+					<div class="about-text">
+						<p>Bioinformatician and clinical data scientist with a strong quantitative research background and hands-on experience in NGS and cancer genomics.</p>
+						<p>
+							I work across WGS, WES, bulk RNA-seq and scRNA-seq, with practical expertise in GATK4/Mutect2, SAMtools, DESeq2, Seurat and Nextflow/nf-core, and I'm currently extending into spatial transcriptomics. I build reproducible, containerised workflows and bring years of clinical research experience to genomic and biomedical datasets.
+						</p>
+						<p>
+							My foundation is in epidemiology and biostatistics. Since 2016 I have analysed data for clinical investigators — cleaning and validating raw datasets, regression and survival modelling, predictive models, and study design and sample size planning — contributing to peer-reviewed publications and training postgraduate fellowship candidates in research methods.
+						</p>
+						<p>
+							At the MAI Lab I curate brain MRI data and evaluate segmentation models on African glioma scans — work driven by a simple conviction: African patients deserve to be well represented in the data that shapes precision medicine.
+						</p>
+						<div class="focus-list">
+							<span class="chip accent">Cancer genomics</span>
+							<span class="chip accent">Somatic variant calling</span>
+							<span class="chip accent">Single-cell transcriptomics</span>
+							<span class="chip accent">Medical AI evaluation</span>
+							<span class="chip accent">Clinical data analysis</span>
+							<span class="chip accent">Epidemiology</span>
+							<span class="chip">Biostatistics</span>
+							<span class="chip">Regression &amp; survival modelling</span>
+							<span class="chip">Study design</span>
+							<span class="chip">Reproducible workflows</span>
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</section>
 
-		<!-- Core Competencies Section -->
-		<section id="competencies" class="section container">
-			<div class="section-header" id="competencies-header">
-				<span class="section-subtitle">What I Do Best</span>
-				<h2 class="section-title">Core Competencies</h2>
-				<p class="section-desc">
-					End-to-end capabilities for clinical genomics pipelines, somatic variant discovery, and cancer research analytics.
-				</p>
-			</div>
-
-			<div class="competencies-grid" id="competencies-cards-grid">
-				<!-- Competency 1 -->
-				<div class="glass-card" id="comp-card-1">
-					<div class="comp-icon">
-						<!-- Custom DNA/Genomics icon -->
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5C4.5 7 7 4.5 10.5 4.5S16.5 7 16.5 10.5 14 16.5 10.5 16.5 4.5 14 4.5 10.5z"></path><path d="M13.5 13.5L19.5 19.5"></path></svg>
-					</div>
-					<h3 class="comp-title">Cancer Genomics</h3>
-					<p class="comp-desc">Tumour-normal WES/WGS somatic variant calling with Mutect2, COSMIC mutational signature decomposition, and driver gene characterization in breast cancer.</p>
+		<!-- Experience -->
+		<section class="section" id="experience">
+			<div class="container">
+				<div class="section-head reveal">
+					<div class="section-label">Experience</div>
+					<div><h2>Where I've been working</h2></div>
 				</div>
-
-				<!-- Competency 2 -->
-				<div class="glass-card" id="comp-card-2">
-					<div class="comp-icon">
-						<!-- Pipeline Gears icon -->
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-					</div>
-					<h3 class="comp-title">Genomic Pipeline</h3>
-					<p class="comp-desc">Docker-based reproducible pipelines from BAM QC and BQSR through Mutect2 filtering, SnpEff annotation, and automated reporting with Python and R.</p>
-				</div>
-
-				<!-- Competency 3 -->
-				<div class="glass-card" id="comp-card-3">
-					<div class="comp-icon">
-						<!-- Trend Chart icon -->
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line><line x1="2" y1="20" x2="22" y2="20"></line></svg>
-					</div>
-					<h3 class="comp-title">Epidemiological Modeling</h3>
-					<p class="comp-desc">Application of univariate, bivariate, and multivariate regression modeling techniques to elucidate complex clinical outcomes and disease spreads.</p>
-				</div>
-
-				<!-- Competency 4 -->
-				<div class="glass-card" id="comp-card-4">
-					<div class="comp-icon">
-						<!-- Protein helix icon -->
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-					</div>
-					<h3 class="comp-title">Molecular Profiling & Characterization</h3>
-					<p class="comp-desc">Conserved domain identification, protein structural mapping, in silico characterization, and phylogenetic analysis of disease genes.</p>
-				</div>
-
-				<!-- Competency 5 -->
-				<div class="glass-card" id="comp-card-5">
-					<div class="comp-icon">
-						<!-- AI Brain icon -->
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-					</div>
-					<h3 class="comp-title">Machine Learning & Generative AI</h3>
-					<p class="comp-desc">Building and deploying machine learning models, clinical NLP interfaces, LLMs, and RAG architectures in oncology and healthcare settings.</p>
-				</div>
-
-				<!-- Competency 6 -->
-				<div class="glass-card" id="comp-card-6">
-					<div class="comp-icon">
-						<!-- Clipboard Checklist icon -->
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
-					</div>
-					<h3 class="comp-title">Research Methodology & Support</h3>
-					<p class="comp-desc">Study design advice, methodology training, clinical trial protocol formulation, and comprehensive scientific project management support.</p>
-				</div>
+				<ol class="timeline">
+					<li class="tl-item reveal">
+						<div class="tl-when">2026 – Present<br /><span class="now">Current</span></div>
+						<div>
+							<h3>Research Intern</h3>
+							<div class="tl-org">Medical Artificial Intelligence Laboratory (MAI Lab) · Lagos, Nigeria</div>
+							<ul>
+								<li>Curated brain MRI data for medical AI: organised multi-sequence scans and segmentation labels, checked image–label consistency and quality, and prepared standardised datasets for model training and evaluation.</li>
+								<li>Built and deployed a BraTS-Africa 3D U-Net brain tumour segmentation model on African glioma MRI data (SPARK dataset), with a live Streamlit demo and transparent reporting of performance and limitations.</li>
+							</ul>
+						</div>
+					</li>
+					<li class="tl-item reveal">
+						<div class="tl-when">Mar 2016 – Present</div>
+						<div>
+							<h3>Independent Clinical Data Scientist &amp; Bioinformatics Analyst</h3>
+							<div class="tl-org">Remote · academic medical centres, hospital research departments and clinical investigators across Nigeria</div>
+							<ul>
+								<li>Built end-to-end predictive models and ML pipelines on clinical datasets spanning epidemiology, endocrinology, radiology and internal medicine, including a logistic regression mortality model (hold-out ROC AUC 0.974).</li>
+								<li>Developed LLM and RAG-based biomedical research applications, including a clinically grounded hMPV question-answering chatbot; built interactive dashboards with Streamlit and Python.</li>
+								<li>Created reproducible bioinformatics workflows for somatic variant calling, TP53 mutation profiling, protein characterisation, and TCGA cancer transcriptomic and survival analysis.</li>
+								<li>Cleaned, validated and restructured raw clinical datasets, and wrote step-by-step results write-ups with traceable outputs for dissertations and manuscripts.</li>
+								<li>Collaborated with multidisciplinary clinical teams on research design, analysis and manuscript preparation, contributing to 7 peer-reviewed publications.</li>
+							</ul>
+						</div>
+					</li>
+					<li class="tl-item reveal">
+						<div class="tl-when">2018 – Present</div>
+						<div>
+							<h3>Invited Resource Person — Biostatistics &amp; Research Methodology</h3>
+							<div class="tl-org">Lagos University Teaching Hospital (LUTH) &amp; Lagos State University Teaching Hospital (LASUTH)</div>
+							<ul>
+								<li>Designed and delivered biostatistics and research methodology training for 150+ postgraduate medical candidates preparing for WACP, WACS and NPMCN fellowship examinations.</li>
+								<li>Facilitated capacity-building sessions in person and remotely, covering study design, hypothesis testing, sample size calculation and statistical interpretation.</li>
+							</ul>
+						</div>
+					</li>
+				</ol>
 			</div>
 		</section>
 
-		<!-- Technical Expertise Dashboard -->
-		<section id="expertise" class="section container">
-			<div class="section-header" id="expertise-header">
-				<span class="section-subtitle">The Tech Stack</span>
-				<h2 class="section-title">Technical Expertise</h2>
-				<p class="section-desc">
-					A balanced combination of biology tools, data science frameworks, and modern DevOps platforms.
-				</p>
-			</div>
-
-			<div class="expertise-dashboard" id="tech-dashboard-grid">
-				<!-- Panel 1: Bioinformatics -->
-				<div class="exp-panel" id="panel-bioinformatics">
-					<div class="panel-header">
-						<span class="panel-icon">
-							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"></path><path d="M12 2v20"></path><path d="M19 17a7 7 0 0 0-14 0"></path><path d="M19 8a7 7 0 0 0-14 0"></path></svg>
-						</span>
-						<h3 class="panel-title">Bioinformatics & Genomics</h3>
-					</div>
-					<div class="skills-badge-container" id="badges-bioinformatics">
-						<span class="skill-badge" id="skill-biopython">Biopython</span>
-						<span class="skill-badge" id="skill-blast">BLAST</span>
-						<span class="skill-badge" id="skill-ncbi">NCBI Databases</span>
-						<span class="skill-badge" id="skill-fastqc">FastQC</span>
-						<span class="skill-badge" id="skill-trimmomatic">Trimmomatic</span>
-						<span class="skill-badge" id="skill-bwa">BWA</span>
-						<span class="skill-badge" id="skill-samtools">SAMtools</span>
-						<span class="skill-badge" id="skill-gatk">GATK4 / Mutect2</span>
-						<span class="skill-badge" id="skill-rnaseq">RNA-seq</span>
-						<span class="skill-badge" id="skill-snpeff">SnpEff</span>
-						<span class="skill-badge" id="skill-wes">WES / WGS</span>
-						<span class="skill-badge" id="skill-nextflow">Nextflow</span>
-						<span class="skill-badge learning-badge" id="skill-tmb">TMB</span>
-						<span class="skill-badge learning-badge" id="skill-cnv">CNV Calling</span>
-						<span class="skill-badge" id="skill-scrnaseq">scRNA-seq</span>
+		<!-- Projects -->
+		<section class="section alt" id="projects">
+			<div class="container">
+				<div class="section-head reveal">
+					<div class="section-label">Selected projects</div>
+					<div>
+						<h2>Pipelines and analyses</h2>
+						<p>Each one is open source, containerised where it matters, and documented so the results can be traced back to the raw data.</p>
 					</div>
 				</div>
 
-				<!-- Panel 2: Data Science & Stats -->
-				<div class="exp-panel" id="panel-datascience">
-					<div class="panel-header">
-						<span class="panel-icon">
-							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-						</span>
-						<h3 class="panel-title">Data Science & Programming</h3>
-					</div>
-					<div class="skills-badge-container" id="badges-datascience">
-						<span class="skill-badge" id="skill-python">Python</span>
-						<span class="skill-badge" id="skill-r">R Language</span>
-						<span class="skill-badge" id="skill-bash">Linux & Bash</span>
-						<span class="skill-badge" id="skill-sql">SQL Databases</span>
-						<span class="skill-badge" id="skill-downstream">Downstream Analysis</span>
-						<span class="skill-badge" id="skill-modeling">Biostatistics Modeling</span>
-						<span class="skill-badge" id="skill-ml">Machine Learning</span>
-						<span class="skill-badge" id="skill-survival">Survival Analysis</span>
-					</div>
+				<div class="projects">
+					<article class="project featured reveal">
+						<div style="display:flex;flex-direction:column;gap:12px;">
+							<span class="kicker">Flagship · Whole-genome sequencing</span>
+							<h3><a href="case-study-hcc1395.html">Somatic WGS Pipeline — HCC1395 Tumour–Normal, SEQC2 Benchmark</a></h3>
+							<p>A modular 7-stage tumour–normal WGS pipeline on a 16 vCPU AWS instance, validated against the SEQC2 v1.2 gold-standard truth set. I debugged FASTQ read-name mismatches and cut runtime about 3× (48 h → 14 h) by moving to Colab Pro+; every stage can be re-run and audited on its own.</p>
+							<div class="metrics">
+								<span class="chip">SEQC2 v1.2</span>
+								<span class="chip">48 h → 14 h</span>
+								<span class="chip">16 vCPU AWS</span>
+								<span class="chip">7 stages</span>
+							</div>
+							<div class="project-links">
+								<a href="case-study-hcc1395.html">Read the case study →</a>
+								<a href="https://github.com/Ceefour18/Breast_cancer_WGS" target="_blank" rel="noopener">GitHub ↗</a>
+							</div>
+						</div>
+						<div class="featured-side">
+							<h4>Pipeline</h4>
+							<ol class="pipeline">
+								<li>FastQC — read-level QC</li>
+								<li>BWA-MEM — alignment to GRCh38</li>
+								<li>MarkDuplicates + BQSR</li>
+								<li>Mutect2 — tumour–normal calling</li>
+								<li>FilterMutectCalls</li>
+								<li>SnpEff — functional annotation</li>
+								<li>Benchmark vs SEQC2 truth set</li>
+							</ol>
+						</div>
+					</article>
+
+					<article class="project reveal">
+						<span class="kicker">Whole-exome sequencing</span>
+						<h3><a href="https://github.com/Ceefour18/somatic-wes-breast-cancer-gatk4" target="_blank" rel="noopener">Somatic WES Pipeline — HCC1143 Breast Cancer</a></h3>
+						<p>Docker-based GATK4 Best Practices pipeline targeting chr17 (TP53, BRCA1, ERBB2). FilterMutectCalls reduced 182 raw calls to 27 PASS variants and recovered the clonal TP53 p.Arg248Gln driver; C&gt;T transitions (52%) are consistent with SBS1/SBS5 ageing signatures.</p>
+						<div class="metrics">
+							<span class="chip">99.47% mapped</span>
+							<span class="chip">1.11% contamination</span>
+							<span class="chip">TP53 VAF 98.6%</span>
+						</div>
+						<div class="project-links"><a href="https://github.com/Ceefour18/somatic-wes-breast-cancer-gatk4" target="_blank" rel="noopener">GitHub ↗</a></div>
+					</article>
+
+					<article class="project reveal">
+						<span class="kicker">Single-cell RNA-seq</span>
+						<h3><a href="https://github.com/Ceefour18/scRNA_BreastCA" target="_blank" rel="noopener">Breast Cancer Tumour Microenvironment (GSE176078)</a></h3>
+						<p>Containerised Seurat v5 pipeline (Harmony, scDblFinder, SingleR, sccomp, pseudobulk DESeq2) across 9 patients and 3 subtypes. Fibroblasts were elevated in TNBC, and 9 T cell subclusters were resolved.</p>
+						<div class="metrics">
+							<span class="chip">9 patients</span>
+							<span class="chip">TNBC fibroblasts FDR 0.011</span>
+							<span class="chip">9 T cell subclusters</span>
+						</div>
+						<div class="project-links"><a href="https://github.com/Ceefour18/scRNA_BreastCA" target="_blank" rel="noopener">GitHub ↗</a></div>
+					</article>
+
+					<article class="project reveal">
+						<span class="kicker">Bulk RNA-seq · Survival</span>
+						<h3><a href="https://github.com/Ceefour18/tcga-brca-rnaseq" target="_blank" rel="noopener">TCGA-BRCA — PAM50 Basal-like vs Luminal A</a></h3>
+						<p>752 tumours pulled through GDC/TCGAbiolinks. DESeq2 with apeglm shrinkage identified 5,346 differentially expressed genes, followed by GO/KEGG and GSEA enrichment, and Kaplan–Meier and Cox survival modelling.</p>
+						<div class="metrics">
+							<span class="chip">752 tumours</span>
+							<span class="chip">5,346 DEGs</span>
+							<span class="chip">KM + Cox</span>
+						</div>
+						<div class="project-links"><a href="https://github.com/Ceefour18/tcga-brca-rnaseq" target="_blank" rel="noopener">GitHub ↗</a></div>
+					</article>
+
+					<article class="project reveal">
+						<span class="kicker">Variant interpretation</span>
+						<h3><a href="https://github.com/Ceefour18/tp53-cancer-genomics" target="_blank" rel="noopener">TP53 Cancer Genomics &amp; In Silico Protein Characterisation</a></h3>
+						<p>Processed 2,319 ClinVar variants (335 pathogenic) and modelled five TP53 hotspot mutations with BLAST and functional domain annotation, plus MEGA phylogenetic analysis. Python, Biopython and R.</p>
+						<div class="metrics">
+							<span class="chip">2,319 variants</span>
+							<span class="chip">335 pathogenic</span>
+							<span class="chip">99.46% BLAST identity</span>
+						</div>
+						<div class="project-links"><a href="https://github.com/Ceefour18/tp53-cancer-genomics" target="_blank" rel="noopener">GitHub ↗</a></div>
+					</article>
+
+					<article class="project reveal">
+						<span class="kicker">Medical AI · MRI</span>
+						<h3>BraTS-Africa Brain Tumour Segmentation</h3>
+						<p>3D U-Net glioma segmentation model trained and evaluated on African MRI data (SPARK dataset), deployed as a live Streamlit demo with transparent reporting of performance and limitations. Built at the MAI Lab.</p>
+						<div class="metrics">
+							<span class="chip">3D U-Net</span>
+							<span class="chip">Multi-sequence MRI</span>
+							<span class="chip">Streamlit demo</span>
+						</div>
+					</article>
+
+					<article class="project reveal">
+						<span class="kicker">Healthcare AI · LLM</span>
+						<h3><a href="https://github.com/Ceefour18/HMPV" target="_blank" rel="noopener">RAG-Powered hMPV Question-Answering Chatbot</a></h3>
+						<p>An LLM with retrieval-augmented generation that answers questions about Human Metapneumovirus from curated clinical sources, keeping answers grounded rather than invented.</p>
+						<div class="metrics">
+							<span class="chip">LLM</span>
+							<span class="chip">RAG</span>
+						</div>
+						<div class="project-links"><a href="https://github.com/Ceefour18/HMPV" target="_blank" rel="noopener">GitHub ↗</a></div>
+					</article>
+
+					<article class="project reveal">
+						<span class="kicker">Clinical prediction</span>
+						<h3><a href="https://github.com/Ceefour18/Predicting-mortality-using-logistic-regression" target="_blank" rel="noopener">Mortality Risk Model — Logistic Regression</a></h3>
+						<p>End-to-end clinical mortality model with hold-out validation, built to support risk stratification and to be read and questioned by clinicians.</p>
+						<div class="metrics">
+							<span class="chip">Hold-out ROC AUC 0.974</span>
+						</div>
+						<div class="project-links"><a href="https://github.com/Ceefour18/Predicting-mortality-using-logistic-regression" target="_blank" rel="noopener">GitHub ↗</a></div>
+					</article>
 				</div>
 
-				<!-- Panel 3: Infrastructure & Platforms -->
-				<div class="exp-panel" id="panel-infrastructure">
-					<div class="panel-header">
-						<span class="panel-icon">
-							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-						</span>
-						<h3 class="panel-title">Infrastructure & Frameworks</h3>
-					</div>
-					<div class="skills-badge-container" id="badges-infrastructure">
-						<span class="skill-badge" id="skill-docker">Docker</span>
-						<span class="skill-badge" id="skill-galaxy">Galaxy Platform</span>
-						<span class="skill-badge" id="skill-cloud">Cloud Computing</span>
-						<span class="skill-badge" id="skill-git">Git Version Control</span>
-						<span class="skill-badge" id="skill-pipelines">CI/CD Workflows</span>
-						<span class="skill-badge" id="skill-ethics">Ethical AI / HIPAA</span>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Currently Building Section -->
-		<section id="building" class="section container">
-			<div class="section-header">
-				<span class="section-subtitle">Active Trajectory</span>
-				<h2 class="section-title">Currently Building</h2>
-				<p class="section-desc">
-					In-progress work that extends my cancer genomics stack toward production-grade, multi-omics pipelines.
-				</p>
-			</div>
-			<div class="building-grid">
-				<div class="glass-card building-card">
-					<div class="building-status"><span class="pulse-dot"></span> In Progress</div>
-					<h3>Multi-omics &amp; Spatial Integration</h3>
-					<p>Extending the cancer genomics stack toward integrated, production-grade multi-omics over the coming weeks:</p>
-					<ul class="building-list">
-						<li><strong>Nextflow Somatic Pipeline</strong> — porting the HCC1395 WGS bash workflow to Nextflow with nf-core conventions: containerised processes, resume support, and HPC/cloud profiles for scalable tumour-normal calling.</li>
-						<li><strong>Multi-omics Data Integration</strong> — linking somatic variants, RNA-seq, and scRNA-seq into a unified layer, exploring graph-based integration methods alongside standard concatenation/factorisation approaches.</li>
-						<li><strong>Spatial Multi-omics</strong> — extending tumour microenvironment analysis from dissociated scRNA-seq into spatial transcriptomics to resolve cell-cell interactions and niche-level heterogeneity in situ.</li>
+				<div class="other-work reveal">
+					<h3>More on GitHub</h3>
+					<ul class="link-list">
+						<li><a href="https://github.com/Ceefour18/In_Silico_Characterization_protein" target="_blank" rel="noopener">In silico protein characterisation</a><span>BLAST · MEGA</span></li>
+						<li><a href="https://github.com/Ceefour18/Analysis-Highlight" target="_blank" rel="noopener">Clinical data analysis highlights</a><span>Biostatistics</span></li>
+						<li><a href="https://github.com/Ceefour18/Cancer_Exploratory" target="_blank" rel="noopener">Cancer exploratory data analysis</a><span>Python</span></li>
+						<li><a href="https://github.com/Ceefour18/Streamlitapp" target="_blank" rel="noopener">Biomedical analytics dashboard</a><span>Streamlit</span></li>
+						<li><a href="https://github.com/Ceefour18/Beats-by-Dre-Consumer-Insights" target="_blank" rel="noopener">Product review sentiment analysis</a><span>NLP</span></li>
+						<li><a href="https://github.com/Ceefour18" target="_blank" rel="noopener">All repositories</a><span>github.com/Ceefour18</span></li>
 					</ul>
 				</div>
 			</div>
 		</section>
 
-		<!-- Skills in Action Matrix -->
-		<section id="skills-in-action" class="section container">
-			<div class="section-header">
-				<span class="section-subtitle">Cross-Reference</span>
-				<h2 class="section-title">Skills in Action</h2>
-				<p class="section-desc">
-					Where each core tool actually shows up in the project work — a quick scan instead of reading every card below.
-				</p>
-			</div>
-			<div class="glass-card skills-matrix-card">
-				<table class="skills-matrix">
-					<thead>
-						<tr>
-							<th>Tool</th>
-							<th>Used In</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>GATK4 / Mutect2</td>
-							<td><a href="#project-flagship-wes">Somatic WES Pipeline</a>, <a href="#project-hcc1395-wgs">HCC1395 WGS Pipeline</a></td>
-						</tr>
-						<tr>
-							<td>AWS (Cloud Computing)</td>
-							<td><a href="#project-hcc1395-wgs">HCC1395 WGS Pipeline</a></td>
-						</tr>
-						<tr>
-							<td>DESeq2 / apeglm</td>
-							<td><a href="#project-tcga-brca-rnaseq">TCGA-BRCA RNA-seq Subtype Analysis</a></td>
-						</tr>
-						<tr>
-							<td>BLAST / NCBI</td>
-							<td><a href="#project-tp53">TP53 Cancer Genomics</a>, <a href="#project-silico">In Silico Protein Characterization</a></td>
-						</tr>
-						<tr>
-							<td>Docker</td>
-							<td><a href="#project-flagship-wes">Somatic WES Pipeline</a>, <a href="#project-hcc1395-wgs">HCC1395 WGS Pipeline</a></td>
-						</tr>
-						<tr>
-							<td>FastQC / Trimmomatic / BWA / SAMtools</td>
-							<td><a href="#project-flagship-wes">Somatic WES Pipeline</a>, <a href="#project-hcc1395-wgs">HCC1395 WGS Pipeline</a></td>
-						</tr>
-						<tr>
-							<td>SnpEff</td>
-							<td><a href="#project-flagship-wes">Somatic WES Pipeline</a>, <a href="#project-hcc1395-wgs">HCC1395 WGS Pipeline</a></td>
-						</tr>
-						<tr>
-							<td>Biopython</td>
-							<td><a href="#project-tp53">TP53 Cancer Genomics</a>, <a href="#project-silico">In Silico Protein Characterization</a></td>
-						</tr>
-						<tr>
-							<td>Survival Analysis</td>
-							<td><a href="#project-tcga-brca-rnaseq">TCGA-BRCA RNA-seq Subtype Analysis</a></td>
-						</tr>
-						<tr>
-							<td>Nextflow</td>
-							<td>Nextflow Somatic Pipeline (see Currently Building, above)</td>
-						</tr>
-						<tr>
-							<td>Logistic Regression</td>
-							<td><a href="#project-mortality-prediction">Mortality Risk — Logistic Regression</a></td>
-						</tr>
-						<tr>
-							<td>LLM / RAG</td>
-							<td><a href="#project-hmpv-chatbot">RAG-Powered hMPV Chatbot</a></td>
-						</tr>
-						<tr>
-							<td>Seurat / Scanpy</td>
-							<td><a href="#project-scrna-brca">scRNA-seq Breast Cancer TME</a></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</section>
-
-		<!-- Projects Showcase Section -->
-		<section id="projects" class="section container">
-			<div class="section-header" id="projects-header">
-				<span class="section-subtitle">Quantified Results</span>
-				<h2 class="section-title">Cancer Genomics Projects</h2>
-				<p class="section-desc">
-					Impact-first portfolio — benchmark validation, variant yield, and model performance, not just pipeline descriptions.
-				</p>
-			</div>
-
-			<div class="projects-grid" id="projects-showcase-grid">
-
-				<!-- FLAGSHIP: WES GATK4 -->
-				<article class="glass-card featured-project" id="project-flagship-wes">
-					<div class="project-visual">
-						<!-- WES: exome capture bait coverage illustration -->
-						<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
-							<defs>
-								<linearGradient id="wes-grad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#00f2fe" stop-opacity="0.9"/><stop offset="100%" stop-color="#4facfe" stop-opacity="0.9"/></linearGradient>
-								<linearGradient id="wes-bar" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#00f2fe" stop-opacity="0.7"/><stop offset="100%" stop-color="#4facfe" stop-opacity="0.2"/></linearGradient>
-							</defs>
-							<!-- Coverage bars -->
-							<rect x="30" y="140" width="18" height="55" rx="3" fill="url(#wes-bar)"/>
-							<rect x="56" y="100" width="18" height="95" rx="3" fill="url(#wes-bar)"/>
-							<rect x="82" y="70" width="18" height="125" rx="3" fill="url(#wes-bar)"/>
-							<rect x="108" y="55" width="18" height="140" rx="3" fill="url(#wes-bar)"/>
-							<rect x="134" y="45" width="18" height="150" rx="3" fill="url(#wes-bar)"/>
-							<rect x="160" y="50" width="18" height="145" rx="3" fill="url(#wes-bar)"/>
-							<rect x="186" y="60" width="18" height="135" rx="3" fill="url(#wes-bar)"/>
-							<rect x="212" y="80" width="18" height="115" rx="3" fill="url(#wes-bar)"/>
-							<rect x="238" y="95" width="18" height="100" rx="3" fill="url(#wes-bar)"/>
-							<rect x="264" y="75" width="18" height="120" rx="3" fill="url(#wes-bar)"/>
-							<rect x="290" y="55" width="18" height="140" rx="3" fill="url(#wes-bar)"/>
-							<rect x="316" y="65" width="18" height="130" rx="3" fill="url(#wes-bar)"/>
-							<rect x="342" y="90" width="18" height="105" rx="3" fill="url(#wes-bar)"/>
-							<rect x="368" y="120" width="18" height="75" rx="3" fill="url(#wes-bar)"/>
-							<rect x="394" y="150" width="18" height="45" rx="3" fill="url(#wes-bar)"/>
-							<!-- Highlight bar (TP53 locus) -->
-							<rect x="134" y="42" width="18" height="153" rx="3" fill="#00f2fe" opacity="0.9"/>
-							<text x="143" y="35" text-anchor="middle" fill="#00f2fe" font-family="monospace" font-size="9" font-weight="bold">TP53</text>
-							<!-- Baseline -->
-							<line x1="20" y1="195" x2="425" y2="195" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-							<!-- Labels -->
-							<text x="20" y="215" fill="rgba(255,255,255,0.35)" font-family="monospace" font-size="8">chr17:7,661,779</text>
-							<text x="340" y="215" fill="rgba(255,255,255,0.35)" font-family="monospace" font-size="8">7,687,550</text>
-							<text x="240" y="22" text-anchor="middle" fill="rgba(0,242,254,0.5)" font-family="monospace" font-size="10">WES · TUMOUR COVERAGE · CHR17</text>
-						</svg>
-					</div>
-					<div class="project-content">
-						<span class="project-tag">WES · GATK4</span>
-						<h3 class="project-title">
-							<a href="https://github.com/Ceefour18/somatic-wes-breast-cancer-gatk4" target="_blank" rel="noopener">Somatic WES Breast Cancer Pipeline (GATK4)</a>
-						</h3>
-						<div class="project-metrics">
-							<span class="metric-chip highlight">182 → 27 PASS variants</span>
-							<span class="metric-chip">TP53 VAF 98.6%</span>
-							<span class="metric-chip">Contam. 1.11%</span>
-							<span class="metric-chip">99.47% mapped</span>
-						</div>
-						<p class="project-desc">
-							Docker-based GATK4 tumour-normal WES pipeline on HCC1143/HCC1143BL, targeting chr17 (TP53, BRCA1, ERBB2). FilterMutectCalls reduced raw calls by 85% (182 → 27 PASS); recovered clonal TP53 p.Arg248Gln driver at 98.6% VAF; C&gt;T transitions at 52% consistent with SBS1/SBS5 ageing signatures.
-						</p>
-						<p class="project-repro">
-							<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-							Fully version-controlled — Dockerfile, reference genome hashes, and parameter logs committed to repo.
-						</p>
-						<div class="project-footer">
-							<a href="https://github.com/Ceefour18/somatic-wes-breast-cancer-gatk4" class="project-link" target="_blank" rel="noopener">View Repository</a>
-						</div>
-					</div>
-				</article>
-
-				<!-- FEATURED: HCC1395 WGS Case Study -->
-				<article class="glass-card featured-project" id="project-hcc1395-wgs">
-					<div class="project-visual">
-						<!-- WGS: tumour-normal VAF scatter / SEQC2 benchmark illustration -->
-						<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
-							<defs>
-								<linearGradient id="wgs-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#b887fc" stop-opacity="0.9"/><stop offset="100%" stop-color="#4facfe" stop-opacity="0.9"/></linearGradient>
-							</defs>
-							<!-- Axes -->
-							<line x1="50" y1="180" x2="440" y2="180" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
-							<line x1="50" y1="20" x2="50" y2="180" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
-							<!-- Axis labels -->
-							<text x="240" y="210" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="monospace" font-size="8">Normal VAF</text>
-							<text x="14" y="105" fill="rgba(255,255,255,0.35)" font-family="monospace" font-size="8" transform="rotate(-90,14,105)">Tumour VAF</text>
-							<!-- Scatter dots — somatic variants (high tumour, low normal) -->
-							<circle cx="65" cy="40" r="4" fill="#00f2fe" opacity="0.8"/>
-							<circle cx="75" cy="55" r="3" fill="#00f2fe" opacity="0.7"/>
-							<circle cx="60" cy="70" r="5" fill="#00f2fe" opacity="0.9"/>
-							<circle cx="80" cy="35" r="3" fill="#00f2fe" opacity="0.75"/>
-							<circle cx="70" cy="90" r="4" fill="#4facfe" opacity="0.8"/>
-							<circle cx="90" cy="50" r="3" fill="#4facfe" opacity="0.7"/>
-							<circle cx="85" cy="75" r="4" fill="#4facfe" opacity="0.8"/>
-							<circle cx="100" cy="60" r="3" fill="#4facfe" opacity="0.65"/>
-							<circle cx="110" cy="45" r="5" fill="#00f2fe" opacity="0.85"/>
-							<circle cx="95" cy="100" r="3" fill="#4facfe" opacity="0.7"/>
-							<!-- TP53 highlighted dot -->
-							<circle cx="68" cy="32" r="7" fill="none" stroke="#00f2fe" stroke-width="1.5" opacity="0.9"/>
-							<circle cx="68" cy="32" r="4" fill="#00f2fe" opacity="1"/>
-							<text x="80" y="30" fill="#00f2fe" font-family="monospace" font-size="8" font-weight="bold">TP53 p.R248Q</text>
-							<!-- Germline noise cluster (low tumour, low normal) -->
-							<circle cx="200" cy="165" r="2.5" fill="rgba(255,255,255,0.2)"/>
-							<circle cx="230" cy="160" r="2" fill="rgba(255,255,255,0.2)"/>
-							<circle cx="260" cy="168" r="2.5" fill="rgba(255,255,255,0.2)"/>
-							<circle cx="310" cy="162" r="2" fill="rgba(255,255,255,0.2)"/>
-							<circle cx="350" cy="167" r="2.5" fill="rgba(255,255,255,0.2)"/>
-							<circle cx="390" cy="163" r="2" fill="rgba(255,255,255,0.2)"/>
-							<!-- SEQC2 label -->
-							<rect x="330" y="20" width="100" height="22" rx="4" fill="rgba(161,140,209,0.12)" stroke="rgba(161,140,209,0.3)" stroke-width="1"/>
-							<text x="380" y="35" text-anchor="middle" fill="#b887fc" font-family="monospace" font-size="9" font-weight="bold">SEQC2 v1.2</text>
-							<text x="240" y="14" text-anchor="middle" fill="rgba(161,140,209,0.5)" font-family="monospace" font-size="10">WGS · SOMATIC VAF LANDSCAPE · HCC1395</text>
-						</svg>
-					</div>
-					<div class="project-content">
-						<span class="project-tag">WGS · Case Study · SEQC2</span>
-						<h3 class="project-title">
-							<a href="case-study-hcc1395.html">HCC1395 Somatic WGS Pipeline (SEQC2 Benchmark)</a>
-						</h3>
-						<div class="project-metrics">
-							<span class="metric-chip highlight">SEQC2 gold-standard</span>
-							<span class="metric-chip">~3× faster (Colab)</span>
-							<span class="metric-chip">16 vCPU AWS</span>
-							<span class="metric-chip">7 stages</span>
-						</div>
-						<p class="project-desc">
-							End-to-end tumour-normal WGS somatic calling on HCC1395/HCC1395BL, validated against the SEQC2 v1.2 truth set. Runtime cut ~3× (48 h → 14 h) by migrating to Colab Pro+. Full write-up including the FASTQ read-name mismatch debug story — the kind of QC work production pipelines depend on.
-						</p>
-						<p class="project-repro">
-							<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-							Modular bash pipeline with Docker mounts — each stage independently re-runnable and auditable.
-						</p>
-						<div class="project-footer">
-							<a href="case-study-hcc1395.html" class="project-link">Read Case Study</a>
-							<a href="https://github.com/Ceefour18/Breast_cancer_WGS" class="project-link project-link-secondary" target="_blank" rel="noopener">GitHub</a>
-						</div>
-					</div>
-				</article>
-
-				<!-- TCGA-BRCA RNA-seq -->
-				<article class="glass-card project-card" id="project-tcga-brca-rnaseq">
-					<div class="project-visual">
-						<!-- Volcano plot: Basal-like vs Luminal A differential expression -->
-						<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
-							<!-- Axes -->
-							<line x1="30" y1="170" x2="370" y2="170" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
-							<line x1="200" y1="20" x2="200" y2="170" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="2,2"/>
-							<text x="200" y="185" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="monospace" font-size="8">log2FC (Basal vs Luminal A)</text>
-							<text x="14" y="100" fill="rgba(255,255,255,0.35)" font-family="monospace" font-size="8" transform="rotate(-90,14,100)">-log10(padj)</text>
-							<!-- Up in Basal-like (right, red) -->
-							<circle cx="240" cy="130" r="2.5" fill="#ff6b6b" opacity="0.7"/>
-							<circle cx="260" cy="100" r="3" fill="#ff6b6b" opacity="0.8"/>
-							<circle cx="285" cy="70" r="3" fill="#ff6b6b" opacity="0.85"/>
-							<circle cx="255" cy="60" r="2.5" fill="#ff6b6b" opacity="0.75"/>
-							<circle cx="300" cy="45" r="4" fill="#ff6b6b" opacity="0.9"/>
-							<circle cx="230" cy="110" r="2" fill="#ff6b6b" opacity="0.6"/>
-							<circle cx="270" cy="85" r="2.5" fill="#ff6b6b" opacity="0.8"/>
-							<circle cx="320" cy="55" r="3" fill="#ff6b6b" opacity="0.85"/>
-							<!-- Up in Luminal A (left, blue) -->
-							<circle cx="160" cy="125" r="2.5" fill="#4facfe" opacity="0.7"/>
-							<circle cx="140" cy="95" r="3" fill="#4facfe" opacity="0.8"/>
-							<circle cx="115" cy="65" r="3" fill="#4facfe" opacity="0.85"/>
-							<circle cx="145" cy="58" r="2.5" fill="#4facfe" opacity="0.75"/>
-							<circle cx="100" cy="42" r="4" fill="#4facfe" opacity="0.9"/>
-							<circle cx="170" cy="108" r="2" fill="#4facfe" opacity="0.6"/>
-							<circle cx="130" cy="80" r="2.5" fill="#4facfe" opacity="0.8"/>
-							<circle cx="80" cy="52" r="3" fill="#4facfe" opacity="0.85"/>
-							<!-- Non-significant noise cluster -->
-							<circle cx="190" cy="160" r="2" fill="rgba(255,255,255,0.2)"/>
-							<circle cx="205" cy="155" r="2" fill="rgba(255,255,255,0.2)"/>
-							<circle cx="175" cy="163" r="1.5" fill="rgba(255,255,255,0.2)"/>
-							<circle cx="215" cy="158" r="2" fill="rgba(255,255,255,0.2)"/>
-							<text x="200" y="14" text-anchor="middle" fill="rgba(79,172,254,0.5)" font-family="monospace" font-size="10">RNA-SEQ · PAM50 SUBTYPE DE · TCGA-BRCA</text>
-						</svg>
-					</div>
-					<span class="project-tag">RNA-seq · TCGA-BRCA</span>
-					<h3 class="project-title">
-						<a href="https://github.com/Ceefour18/tcga-brca-rnaseq" target="_blank" rel="noopener">TCGA-BRCA RNA-seq Subtype Analysis</a>
-					</h3>
-					<div class="project-metrics">
-						<span class="metric-chip">752 tumours</span>
-						<span class="metric-chip">5,346 DEGs</span>
-						<span class="metric-chip">DESeq2 + apeglm</span>
-					</div>
-					<p class="project-desc">
-						PAM50 Basal-like vs Luminal A breast cancer transcriptomics from the TCGA-BRCA cohort (190 vs 562 tumours), from GDC/TCGAbiolinks acquisition through DESeq2 differential expression, GO/KEGG and GSEA enrichment, and Kaplan-Meier/Cox survival modelling. Basal-like tumours upregulate cell cycle and DNA replication genes; Luminal A upregulates hormone and metabolic pathways.
-					</p>
-					<div class="project-footer">
-						<a href="https://github.com/Ceefour18/tcga-brca-rnaseq" class="project-link" target="_blank" rel="noopener">View Project</a>
-					</div>
-				</article>
-
-				<!-- scRNA-seq Breast Cancer TME -->
-				<article class="glass-card project-card" id="project-scrna-brca">
-					<div class="project-visual">
-						<!-- UMAP-style cell cluster scatter -->
-						<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
-							<!-- Cluster: Epithelial/tumour -->
-							<circle cx="90" cy="60" r="3" fill="#ff6b6b" opacity="0.8"/>
-							<circle cx="105" cy="50" r="2.5" fill="#ff6b6b" opacity="0.75"/>
-							<circle cx="80" cy="75" r="3" fill="#ff6b6b" opacity="0.8"/>
-							<circle cx="100" cy="80" r="2.5" fill="#ff6b6b" opacity="0.7"/>
-							<circle cx="115" cy="65" r="3.5" fill="#ff6b6b" opacity="0.85"/>
-							<circle cx="70" cy="55" r="2" fill="#ff6b6b" opacity="0.65"/>
-							<text x="95" y="35" text-anchor="middle" fill="#ff6b6b" font-family="monospace" font-size="7">Epithelial</text>
-							<!-- Cluster: T cells (incl. exhausted CXCL13+) -->
-							<circle cx="230" cy="50" r="3" fill="#4facfe" opacity="0.8"/>
-							<circle cx="245" cy="62" r="2.5" fill="#4facfe" opacity="0.75"/>
-							<circle cx="215" cy="65" r="3" fill="#4facfe" opacity="0.8"/>
-							<circle cx="255" cy="45" r="2.5" fill="#4facfe" opacity="0.7"/>
-							<circle cx="240" cy="35" r="3.5" fill="#00f2fe" opacity="0.9"/>
-							<circle cx="225" cy="42" r="2" fill="#4facfe" opacity="0.65"/>
-							<text x="238" y="24" text-anchor="middle" fill="#00f2fe" font-family="monospace" font-size="7">CXCL13+ T (exh.)</text>
-							<!-- Cluster: Fibroblasts (elevated in TNBC) -->
-							<circle cx="150" cy="140" r="3" fill="#feca57" opacity="0.8"/>
-							<circle cx="165" cy="150" r="3.5" fill="#feca57" opacity="0.85"/>
-							<circle cx="135" cy="155" r="2.5" fill="#feca57" opacity="0.7"/>
-							<circle cx="170" cy="130" r="2.5" fill="#feca57" opacity="0.75"/>
-							<circle cx="145" cy="165" r="3" fill="#feca57" opacity="0.8"/>
-							<text x="152" y="180" text-anchor="middle" fill="#feca57" font-family="monospace" font-size="7">Fibroblasts</text>
-							<!-- Cluster: Myeloid -->
-							<circle cx="310" cy="130" r="3" fill="#b887fc" opacity="0.8"/>
-							<circle cx="325" cy="145" r="2.5" fill="#b887fc" opacity="0.75"/>
-							<circle cx="295" cy="145" r="3" fill="#b887fc" opacity="0.8"/>
-							<circle cx="315" cy="115" r="2.5" fill="#b887fc" opacity="0.7"/>
-							<text x="310" y="165" text-anchor="middle" fill="#b887fc" font-family="monospace" font-size="7">Myeloid</text>
-							<text x="200" y="14" text-anchor="middle" fill="rgba(79,172,254,0.5)" font-family="monospace" font-size="10">scRNA-SEQ · UMAP · TME BY SUBTYPE</text>
-						</svg>
-					</div>
-					<span class="project-tag">scRNA-seq · Seurat v5</span>
-					<h3 class="project-title">
-						<a href="https://github.com/Ceefour18/scRNA_BreastCA" target="_blank" rel="noopener">scRNA-seq Breast Cancer TME</a>
-					</h3>
-					<div class="project-metrics">
-						<span class="metric-chip">9 patients · 3 subtypes</span>
-						<span class="metric-chip highlight">Fibroblasts ↑ TNBC (FDR 0.011)</span>
-						<span class="metric-chip">9 T cell subclusters</span>
-					</div>
-					<p class="project-desc">
-						Single-cell RNA-seq analysis of the tumour microenvironment across ER+, HER2+, and TNBC breast cancer subtypes (GSE176078, Wu et al. 2021), investigating T cell exhaustion as a driver of subtype immune differences. Docker-containerised Seurat v5 pipeline with Harmony batch integration, scDblFinder doublet removal, SingleR annotation, sccomp compositional analysis, and DESeq2 pseudobulk/GSEA. Fibroblasts are significantly elevated in TNBC; regulatory/exhausted T cells trend higher in HER2+; subclustering resolved 9 T cell populations including a CXCL13+ exhausted state.
-					</p>
-					<div class="project-footer">
-						<a href="https://github.com/Ceefour18/scRNA_BreastCA" class="project-link" target="_blank" rel="noopener">View Project</a>
-					</div>
-				</article>
-
-				<!-- TP53 Genomics -->
-				<article class="glass-card project-card" id="project-tp53">
-					<div class="project-visual">
-						<!-- TP53: protein domain map with hotspot mutations -->
-						<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
-							<defs>
-								<linearGradient id="tp53-dom" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#4facfe" stop-opacity="0.6"/><stop offset="100%" stop-color="#00f2fe" stop-opacity="0.6"/></linearGradient>
-								<linearGradient id="tp53-dbd" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#b887fc" stop-opacity="0.8"/><stop offset="100%" stop-color="#a18cd1" stop-opacity="0.8"/></linearGradient>
-							</defs>
-							<!-- Protein backbone -->
-							<rect x="30" y="88" width="340" height="24" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-							<!-- Domains -->
-							<rect x="30" y="86" width="55" height="28" rx="4" fill="url(#tp53-dom)" opacity="0.7"/>
-							<text x="57" y="104" text-anchor="middle" fill="white" font-family="monospace" font-size="7">TAD</text>
-							<rect x="93" y="83" width="175" height="34" rx="4" fill="url(#tp53-dbd)"/>
-							<text x="180" y="104" text-anchor="middle" fill="white" font-family="monospace" font-size="8" font-weight="bold">DNA-Binding Domain</text>
-							<rect x="276" y="86" width="45" height="28" rx="4" fill="url(#tp53-dom)" opacity="0.7"/>
-							<text x="298" y="104" text-anchor="middle" fill="white" font-family="monospace" font-size="7">OLI</text>
-							<rect x="329" y="86" width="41" height="28" rx="4" fill="url(#tp53-dom)" opacity="0.5"/>
-							<text x="349" y="104" text-anchor="middle" fill="white" font-family="monospace" font-size="7">REG</text>
-							<!-- Hotspot lollipops -->
-							<line x1="130" y1="83" x2="130" y2="52" stroke="#ff6b6b" stroke-width="1.5"/>
-							<circle cx="130" cy="46" r="7" fill="#ff6b6b" opacity="0.9"/>
-							<text x="130" y="50" text-anchor="middle" fill="white" font-family="monospace" font-size="6" font-weight="bold">R175H</text>
-							<line x1="160" y1="83" x2="160" y2="38" stroke="#ff9f43" stroke-width="1.5"/>
-							<circle cx="160" cy="32" r="7" fill="#ff9f43" opacity="0.9"/>
-							<text x="160" y="36" text-anchor="middle" fill="white" font-family="monospace" font-size="6" font-weight="bold">G245S</text>
-							<line x1="195" y1="83" x2="195" y2="52" stroke="#ff6b6b" stroke-width="1.5"/>
-							<circle cx="195" cy="46" r="7" fill="#ff6b6b" opacity="0.9"/>
-							<text x="195" y="50" text-anchor="middle" fill="white" font-family="monospace" font-size="6" font-weight="bold">R248Q</text>
-							<line x1="225" y1="83" x2="225" y2="38" stroke="#feca57" stroke-width="1.5"/>
-							<circle cx="225" cy="32" r="7" fill="#feca57" opacity="0.9"/>
-							<text x="225" y="36" text-anchor="middle" fill="white" font-family="monospace" font-size="6" font-weight="bold">R273H</text>
-							<line x1="252" y1="83" x2="252" y2="52" stroke="#ff9f43" stroke-width="1.5"/>
-							<circle cx="252" cy="46" r="7" fill="#ff9f43" opacity="0.9"/>
-							<text x="252" y="50" text-anchor="middle" fill="white" font-family="monospace" font-size="6" font-weight="bold">R282W</text>
-							<!-- Amino acid scale -->
-							<text x="30" y="130" fill="rgba(255,255,255,0.25)" font-family="monospace" font-size="7">1</text>
-							<text x="175" y="130" fill="rgba(255,255,255,0.25)" font-family="monospace" font-size="7">194</text>
-							<text x="355" y="130" fill="rgba(255,255,255,0.25)" font-family="monospace" font-size="7">393</text>
-							<text x="200" y="170" text-anchor="middle" fill="rgba(0,242,254,0.4)" font-family="monospace" font-size="9">TP53 · 2,319 ClinVar variants · 335 Pathogenic</text>
-						</svg>
-					</div>
-					<span class="project-tag">Cancer Genomics</span>
-					<h3 class="project-title">
-						<a href="https://github.com/Ceefour18/tp53-cancer-genomics" target="_blank" rel="noopener">TP53 Cancer Genomics Analysis</a>
-					</h3>
-					<div class="project-metrics">
-						<span class="metric-chip">2,319 ClinVar variants</span>
-						<span class="metric-chip">335 pathogenic</span>
-						<span class="metric-chip">99.46% BLAST ID</span>
-					</div>
-					<p class="project-desc">
-						Seven-stage pipeline from NCBI reference fetch through BLAST and domain annotation. All 5 modelled hotspot mutations scored 8/10 severity in the DNA-binding domain.
-					</p>
-					<div class="project-footer">
-						<a href="https://github.com/Ceefour18/tp53-cancer-genomics" class="project-link" target="_blank" rel="noopener">View Project</a>
-					</div>
-				</article>
-
-				<!-- In Silico Protein -->
-				<article class="glass-card project-card" id="project-silico">
-					<div class="project-visual">
-						<div class="protein-svg-container">
-							<svg viewBox="0 0 400 250" class="dna-helix-bg" xmlns="http://www.w3.org/2000/svg">
-							  <defs>
-								<linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8"/><stop offset="100%" stop-color="#4facfe" stop-opacity="0.8"/></linearGradient>
-								<linearGradient id="grad-violet" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#b887fc" stop-opacity="0.8"/><stop offset="100%" stop-color="#a18cd1" stop-opacity="0.8"/></linearGradient>
-							  </defs>
-							  <path d="M 70,70 C 110,35 150,155 190,95 C 230,35 270,145 310,65" fill="none" stroke="url(#grad-cyan)" stroke-width="6.5" stroke-linecap="round"/>
-							  <text x="30" y="45" fill="rgba(0, 242, 254, 0.45)" font-family="monospace" font-size="9">SIMILARITY: 99.8%</text>
-							  <text x="260" y="215" fill="rgba(161, 140, 209, 0.55)" font-family="monospace" font-size="9">E-VALUE: 2e-152</text>
-							</svg>
-						</div>
-					</div>
-					<span class="project-tag">Computational Biology</span>
-					<h3 class="project-title">
-						<a href="https://github.com/Ceefour18/In_Silico_Characterization_protein" target="_blank" rel="noopener">In Silico Protein Characterization</a>
-					</h3>
-					<div class="project-metrics">
-						<span class="metric-chip">99.8% align identity</span>
-						<span class="metric-chip">E-value 2e-152</span>
-					</div>
-					<p class="project-desc">
-						Conserved domain identification, BLAST homology search, and structural-functional inference using NCBI, BLAST, and MEGA phylogenetics.
-					</p>
-					<div class="project-footer">
-						<a href="https://github.com/Ceefour18/In_Silico_Characterization_protein" class="project-link" target="_blank" rel="noopener">View Repository</a>
-					</div>
-				</article>
-
-				<!-- Mortality prediction -->
-				<article class="glass-card project-card" id="project-mortality-prediction">
-					<div class="project-visual">
-						<img src="images/Logistic.jpeg" alt="Logistic regression ROC curve" onerror="this.style.display='none'" />
-					</div>
-					<span class="project-tag">Clinical Biostatistics</span>
-					<h3 class="project-title">
-						<a href="https://github.com/Ceefour18/Predicting-mortality-using-logistic-regression" target="_blank" rel="noopener">Mortality Risk — Logistic Regression</a>
-					</h3>
-					<div class="project-metrics">
-						<span class="metric-chip highlight">ROC AUC 0.974</span>
-						<span class="metric-chip">Hold-out validation</span>
-					</div>
-					<p class="project-desc">
-						Logistic regression mortality risk model achieving 0.974 AUC on ROC validation — supporting clinical risk stratification and decision workflows.
-					</p>
-					<div class="project-footer">
-						<a href="https://github.com/Ceefour18/Predicting-mortality-using-logistic-regression" class="project-link" target="_blank" rel="noopener">View Project</a>
-					</div>
-				</article>
-
-				<!-- hMPV Chatbot -->
-				<article class="glass-card project-card" id="project-hmpv-chatbot">
-					<div class="project-visual">
-						<img src="images/hmpv.jpeg" alt="hMPV RAG chatbot" onerror="this.style.display='none'" />
-					</div>
-					<span class="project-tag">Healthcare AI</span>
-					<h3 class="project-title">
-						<a href="https://github.com/Ceefour18/HMPV" target="_blank" rel="noopener">RAG-Powered hMPV Chatbot</a>
-					</h3>
-					<p class="project-desc">
-						LLM + retrieval-augmented generation for clinically grounded Human Metapneumovirus Q&amp;A — demonstrates healthcare NLP deployment patterns.
-					</p>
-					<div class="project-footer">
-						<a href="https://github.com/Ceefour18/HMPV" class="project-link" target="_blank" rel="noopener">View Project</a>
-					</div>
-				</article>
-
-				<!-- Publications -->
-				<article class="glass-card project-card" id="project-publications">
-					<div class="project-visual">
-						<img src="images/journals.jpg" alt="Peer-reviewed publications" onerror="this.style.display='none'" />
-					</div>
-					<span class="project-tag">Research</span>
-					<h3 class="project-title">
-						<a href="https://github.com/Ceefour18/Peer-reviewed-Publication" target="_blank" rel="noopener">Peer-Reviewed Publications</a>
-					</h3>
-					<p class="project-desc">
-						Co-authored papers in medical biostatistics, epidemiology, and digital healthcare — published in <em>BMC Medical Research Methodology</em>, <em>Frontiers in Public Health</em>, <em>Ophthalmology Retina</em>, and related peer-reviewed journals. Statistical analysis credit on "Bilateral Anti-VEGF on Same Day — Investigation on Safety in Retinopathy of Prematurity (BASISROP)", a multicenter retrospective study.
-					</p>
-					<div class="project-footer">
-						<a href="https://github.com/Ceefour18/Peer-reviewed-Publication" class="project-link" target="_blank" rel="noopener">Explore Publications</a>
-					</div>
-				</article>
-
-				<!-- Clinical analysis highlights -->
-				<article class="glass-card project-card" id="project-analysis-highlights">
-					<div class="project-visual">
-						<img src="images/presentation.jpg" alt="Clinical biostatistics" onerror="this.style.display='none'" />
-					</div>
-					<span class="project-tag">Biostatistics</span>
-					<h3 class="project-title">
-						<a href="https://github.com/Ceefour18/Analysis-Highlight" target="_blank" rel="noopener">Clinical Data Analysis Highlights</a>
-					</h3>
-					<p class="project-desc">
-						Descriptive and inferential biostatistics with structured result interpretation slides, data tables, and publication-ready diagrams.
-					</p>
-					<div class="project-footer">
-						<a href="https://github.com/Ceefour18/Analysis-Highlight" class="project-link" target="_blank" rel="noopener">View Project</a>
-					</div>
-				</article>
-
-			</div>
-
-			<!-- Other Data Science Work -->
-			<div class="projects-subsection" id="other-projects">
-				<div class="section-header">
-					<span class="section-subtitle">Broader Data Science</span>
-					<h2 class="section-title">Other Data Science Work</h2>
-					<p class="section-desc">General analytics projects — kept separate to keep the cancer genomics focus sharp above.</p>
+		<!-- Skills -->
+		<section class="section" id="skills">
+			<div class="container">
+				<div class="section-head reveal">
+					<div class="section-label">Technical skills</div>
+					<div><h2>Tools I use day to day</h2></div>
 				</div>
-				<div class="other-projects-grid">
-					<article class="glass-card project-card" id="project-cancer-eda">
-						<div class="project-visual">
-							<img src="images/explore2.jpeg" alt="Cancer EDA" onerror="this.style.display='none'" />
+				<div class="skills reveal">
+					<div class="skill-row">
+						<h3>Core NGS &amp; variant analysis</h3>
+						<div class="focus-list">
+							<span class="chip">GATK4 / Mutect2</span><span class="chip">BQSR</span><span class="chip">BWA-MEM</span><span class="chip">SAMtools</span><span class="chip">bedtools</span><span class="chip">SnpEff</span><span class="chip">FastQC</span><span class="chip">Trimmomatic</span><span class="chip">BLAST</span>
 						</div>
-						<span class="project-tag">Data Science</span>
-						<h3 class="project-title">
-							<a href="https://github.com/Ceefour18/Cancer_Exploratory" target="_blank" rel="noopener">Cancer EDA (Python)</a>
-						</h3>
-						<p class="project-desc">Clinical cohort parsing, missing-value treatment, and multivariate visualization.</p>
-						<div class="project-footer">
-							<a href="https://github.com/Ceefour18/Cancer_Exploratory" class="project-link" target="_blank" rel="noopener">View Project</a>
+					</div>
+					<div class="skill-row">
+						<h3>Transcriptomics &amp; single-cell</h3>
+						<div class="focus-list">
+							<span class="chip">DESeq2</span><span class="chip">Seurat v5</span><span class="chip">Harmony</span><span class="chip">clusterProfiler / GSEA</span><span class="chip">Scanpy</span><span class="chip">Spatial (in progress)</span>
 						</div>
-					</article>
-					<article class="glass-card project-card" id="project-streamlit-app">
-						<div class="project-visual">
-							<img src="images/streamlit.jpg" alt="Streamlit dashboard" onerror="this.style.display='none'" />
+					</div>
+					<div class="skill-row">
+						<h3>Workflows &amp; compute</h3>
+						<div class="focus-list">
+							<span class="chip">Nextflow / nf-core</span><span class="chip">Docker</span><span class="chip">AWS EC2</span><span class="chip">HPC</span><span class="chip">Google Colab</span><span class="chip">Git / GitHub</span>
 						</div>
-						<span class="project-tag">Web Interfaces</span>
-						<h3 class="project-title">
-							<a href="https://github.com/Ceefour18/Streamlitapp" target="_blank" rel="noopener">Streamlit Dashboard</a>
-						</h3>
-						<p class="project-desc">Interactive Streamlit app for exploring biomedical analytics outputs.</p>
-						<div class="project-footer">
-							<a href="https://github.com/Ceefour18/Streamlitapp" class="project-link" target="_blank" rel="noopener">View Project</a>
+					</div>
+					<div class="skill-row">
+						<h3>Programming</h3>
+						<div class="focus-list">
+							<span class="chip">Python (Biopython)</span><span class="chip">R (Bioconductor)</span><span class="chip">Bash / Linux</span><span class="chip">SQL</span>
 						</div>
-					</article>
-					<article class="glass-card project-card" id="project-consumer-insights">
-						<div class="project-visual">
-							<img src="images/Image12.jpg" alt="Consumer insights NLP" onerror="this.style.display='none'" />
+					</div>
+					<div class="skill-row">
+						<h3>AI &amp; machine learning</h3>
+						<div class="focus-list">
+							<span class="chip">LLM &amp; RAG applications</span><span class="chip">Deep learning (3D U-Net)</span><span class="chip">Predictive modelling</span>
 						</div>
-						<span class="project-tag">Consumer Analytics</span>
-						<h3 class="project-title">
-							<a href="https://github.com/Ceefour18/Beats-by-Dre-Consumer-Insights" target="_blank" rel="noopener">Beats by Dre — NLP Sentiment</a>
-						</h3>
-						<p class="project-desc">NLP sentiment analysis on Amazon product reviews — capstone consumer analytics project.</p>
-						<div class="project-footer">
-							<a href="https://github.com/Ceefour18/Beats-by-Dre-Consumer-Insights" class="project-link" target="_blank" rel="noopener">View Notebook</a>
+					</div>
+					<div class="skill-row">
+						<h3>Data types</h3>
+						<div class="focus-list">
+							<span class="chip">FASTQ</span><span class="chip">BAM</span><span class="chip">VCF</span><span class="chip">Expression matrices</span><span class="chip">Single-cell matrices</span><span class="chip">Methylation arrays</span><span class="chip">MRI</span><span class="chip">Clinical datasets</span>
 						</div>
-					</article>
+					</div>
+					<div class="skill-row" style="grid-column: 1 / -1;">
+						<h3>Also proficient</h3>
+						<div class="focus-list">
+							<span class="chip">GWAS QC</span><span class="chip">COSMIC mutational signatures</span><span class="chip">MEGA phylogenetics</span><span class="chip">Survival analysis (Kaplan–Meier, Cox)</span><span class="chip">Streamlit</span><span class="chip">Power BI</span><span class="chip">REDCap</span><span class="chip">SPSS</span><span class="chip">Stata</span><span class="chip">Epi Info</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Contact Section -->
-		<section id="contact" class="section">
-			<div class="container contact-wrapper single-column">
-				<div class="contact-info" id="contact-details-box">
-					<h2 class="contact-title" id="contact-hdr-text">Let's Collaborate</h2>
-					<p class="contact-text" id="contact-intro-p">
-						Open to cancer genomics roles, WES/WGS pipeline work, and multi-omics research collaborations. Based in Lagos — open to relocation or remote anywhere across Europe, the Americas, Australia, and Asia.
-					</p>
-					<p class="contact-availability" id="contact-availability">
-						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-						Available from <strong>Q3 2025</strong> — actively seeking industry and translational research roles in clinical bioinformatics.
-					</p>
-					
-					<div class="contact-methods" id="contact-methods-group">
-						<div class="contact-item" id="contact-item-address">
-							<div class="contact-icon">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-							</div>
-							<div class="contact-content">
-								<h4>Location</h4>
-								<p>Lagos, Nigeria · Open to Europe · Americas · Australia · Asia</p>
-							</div>
-						</div>
-						
-						<div class="contact-item" id="contact-item-phone">
-							<div class="contact-icon">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-							</div>
-							<div class="contact-content">
-								<h4>Phone</h4>
-								<p><a href="tel:+2348174226011">(234) 817-422-6011</a></p>
-							</div>
-						</div>
-						
-						<div class="contact-item" id="contact-item-email">
-							<div class="contact-icon">
-								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-							</div>
-							<div class="contact-content">
-								<h4>Email</h4>
-								<p><a href="mailto:ceefourme@gmail.com">ceefourme@gmail.com</a></p>
-							</div>
-						</div>
+		<!-- Publications, education, certifications -->
+		<section class="section alt" id="publications">
+			<div class="container">
+				<div class="section-head reveal">
+					<div class="section-label">Research &amp; learning</div>
+					<div><h2>Publications, education and certifications</h2></div>
+				</div>
+
+				<div class="two-col reveal">
+					<div>
+						<h3 class="col-title">Selected publications · 7 peer-reviewed</h3>
+						<ul class="plain-list">
+							<li>
+								<span class="pub-title">Association between Social Support and Glycemic Control among Older Type 2 Diabetes Patients</span>
+								<span class="pub-meta"><em>Nigerian Journal of Clinical Medicine</em> · 2024</span>
+							</li>
+							<li>
+								<span class="pub-title">Physicians' Knowledge and Barriers in Sepsis Diagnosis and Management</span>
+								<span class="pub-meta"><em>Journal of Clinical Sciences</em> · 2023</span>
+							</li>
+							<li>
+								<span class="pub-title">Prevalence and Determinants of Peripheral Arterial Disease in Children with Nephrotic Syndrome</span>
+								<span class="pub-meta"><em>PLOS ONE</em> · 2022</span>
+							</li>
+						</ul>
+						<a class="more-link" href="https://github.com/Ceefour18/Peer-reviewed-Publication" target="_blank" rel="noopener">Full publication list ↗</a>
 					</div>
 
-					<div class="contact-cta-box">
-						<a href="mailto:ceefourme@gmail.com" class="btn btn-primary">Email Me</a>
-						<a href="https://www.linkedin.com/in/clement-akinsola/" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
-						<a href="cv.html" class="btn btn-secondary" target="_blank" rel="noopener">Download CV</a>
+					<div>
+						<h3 class="col-title">Education</h3>
+						<ul class="plain-list">
+							<li><span class="t">MSc Cell and Molecular Biology</span><span class="s">University of Lagos · Expected 2027</span></li>
+							<li><span class="t">MSc Public Health (Epidemiology)</span><span class="s">University of Lagos · Coursework completed, 2021</span></li>
+							<li><span class="t">BSc Microbiology</span><span class="s">University of Lagos · 2016</span></li>
+						</ul>
 					</div>
+				</div>
 
-					<div class="contact-social-box" id="social-networks-box">
-						<h3>Social Channels</h3>
-						<div class="social-links">
-							<a href="https://github.com/Ceefour18" class="social-btn" id="social-github-btn" target="_blank" rel="noopener" aria-label="GitHub Profile">
-								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-							</a>
-							<a href="https://www.linkedin.com/in/clement-akinsola/" class="social-btn" id="social-linkedin-btn" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
-								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-							</a>
-							<a href="https://x.com/ceefourme" class="social-btn" id="social-twitter-btn" target="_blank" rel="noopener" aria-label="Twitter Profile">
-								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-							</a>
+				<div class="reveal" style="margin-top:56px;">
+					<h3 class="col-title">Key certifications</h3>
+					<ul class="certs">
+						<li><strong>Use nf-core (Nextflow)</strong> — Seqera, Nextflow Training Week 2026</li>
+						<li><strong>FAS x CHIP Lecture Series 2026: AI in Medicine</strong> — Future African Scientist x Boston Children's Hospital</li>
+						<li><strong>GWAS (Genome-Wide Association Studies)</strong> — ISGlobal, Barcelona Institute for Global Health</li>
+						<li><strong>Biomedical Data Science</strong> — ISGlobal</li>
+						<li><strong>Research Data Management</strong> — H3Africa Consortium</li>
+						<li><strong>Reproducible Research</strong> — World Bank DIME</li>
+						<li><strong>AWS Cloud Practitioner Essentials</strong></li>
+						<li><strong>IBM AI Foundations</strong></li>
+						<li><strong>Generative AI</strong> — Sail Innovation Lab</li>
+						<li><strong>Nigerian National Code for Health Research Ethics</strong> — CITI Program (2026)</li>
+						<li><strong>TCPS 2: CORE 2022, Research Ethics</strong> — Panel on Research Ethics, Canada (2026)</li>
+					</ul>
+					<div class="hero-actions">
+						<a href="https://drive.google.com/drive/folders/1qNPRoC_B_4x82F5xLTSy3hkNh7T-PBLE" class="btn btn-ghost" target="_blank" rel="noopener">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg>
+							View all certificates ↗
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CV band -->
+		<section class="section" id="cv">
+			<div class="container reveal">
+				<div class="cv-band">
+					<div>
+						<h2>My CV</h2>
+						<p>The full two-page CV — experience, projects, skills, publications and certifications. Read it here or download a copy.</p>
+					</div>
+					<div class="hero-actions">
+						<a href="assets/Akinsola_Clement_Morakinyo_CV.pdf" class="btn btn-primary" download>Download PDF</a>
+						<a href="cv.html" class="btn btn-ghost">Read online</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<section class="section alt" id="contact">
+			<div class="container">
+				<div class="section-head reveal">
+					<div class="section-label">Contact</div>
+					<div><h2>Let's talk</h2></div>
+				</div>
+				<div class="contact-grid reveal">
+					<div>
+						<p class="contact-lede">Open to bioinformatics and computational biology roles, cancer genomics research, and collaborations on African genomic data.</p>
+						<p style="color:var(--ink-soft);">Recommendations and feedback are always welcome — if you've seen my work and have a suggestion, a lead or a question, please get in touch.</p>
+						<div class="hero-actions">
+							<a href="mailto:ceefourme@gmail.com" class="btn btn-primary">Email me</a>
+							<a href="https://www.linkedin.com/in/clement-akinsola/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
 						</div>
 					</div>
+					<ul class="contact-list">
+						<li><span class="k">Email</span><a href="mailto:ceefourme@gmail.com">ceefourme@gmail.com</a></li>
+						<li><span class="k">Phone</span><a href="tel:+2348174226011">+234 817 422 6011</a></li>
+						<li><span class="k">GitHub</span><a href="https://github.com/Ceefour18" target="_blank" rel="noopener">github.com/Ceefour18</a></li>
+						<li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/clement-akinsola/" target="_blank" rel="noopener">clement-akinsola</a></li>
+						<li><span class="k">X</span><a href="https://x.com/ceefourme" target="_blank" rel="noopener">@ceefourme</a></li>
+						<li><span class="k">Based in</span><span>Lagos, Nigeria</span></li>
+					</ul>
 				</div>
 			</div>
 		</section>
 	</main>
 
-	<!-- Footer -->
-	<footer class="main-footer">
-		<div class="container footer-container">
-			<div class="footer-copy" id="footer-copyright-label">
-				&copy; 2026 Clement Akinsola (Ceefour). All rights reserved.
-			</div>
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<span>&copy; <span id="year">2026</span> Akinsola Clement Morakinyo</span>
+			<span>
+				<a href="cv.html">CV</a>
+				<a href="https://github.com/Ceefour18" target="_blank" rel="noopener">GitHub</a>
+				<a href="https://www.linkedin.com/in/clement-akinsola/" target="_blank" rel="noopener">LinkedIn</a>
+			</span>
 		</div>
 	</footer>
-
-	<!-- Interactive Mobile Navigation Toggle Script -->
-	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-			const navigationMenu = document.getElementById('navigation-menu');
-
-			// Responsive mobile drawer toggle
-			if (mobileMenuBtn && navigationMenu) {
-				mobileMenuBtn.addEventListener('click', () => {
-					const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-					mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-					
-					// Basic toggle logic
-					if (navigationMenu.style.display === 'flex') {
-						navigationMenu.style.display = '';
-						mobileMenuBtn.style.color = '';
-					} else {
-						navigationMenu.style.display = 'flex';
-						navigationMenu.style.flexDirection = 'column';
-						navigationMenu.style.position = 'absolute';
-						navigationMenu.style.top = '4.5rem';
-						navigationMenu.style.left = '0';
-						navigationMenu.style.width = '100%';
-						navigationMenu.style.background = 'rgba(6, 9, 19, 0.95)';
-						navigationMenu.style.backdropFilter = 'blur(20px)';
-						navigationMenu.style.padding = '2rem';
-						navigationMenu.style.borderBottom = '1px solid rgba(255,255,255,0.08)';
-						navigationMenu.style.gap = '1.5rem';
-						mobileMenuBtn.style.color = 'var(--cyan-glow)';
-					}
-				});
-
-				// Close menu on link click
-				const menuLinks = navigationMenu.querySelectorAll('a');
-				menuLinks.forEach(link => {
-					link.addEventListener('click', () => {
-						if (window.innerWidth <= 768) {
-							navigationMenu.style.display = '';
-							mobileMenuBtn.setAttribute('aria-expanded', 'false');
-							mobileMenuBtn.style.color = '';
-						}
-					});
-				});
-			}
-			
-			// Header sticky scroll effect
-			const mainHeader = document.getElementById('main-header');
-			window.addEventListener('scroll', () => {
-				if (window.scrollY > 50) {
-					mainHeader.style.padding = '0.5rem 0';
-					mainHeader.style.background = 'rgba(6, 9, 19, 0.9)';
-					mainHeader.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
-				} else {
-					mainHeader.style.padding = '';
-					mainHeader.style.background = 'rgba(6, 9, 19, 0.7)';
-					mainHeader.style.boxShadow = '';
-				}
-			});
-		});
-	</script>
 </body>
-
 </html>

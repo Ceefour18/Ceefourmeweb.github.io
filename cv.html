@@ -3,75 +3,172 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>CV — Clement Akinsola | Ceefour</title>
-	<link rel="stylesheet" href="assets/css/modern-theme.css" />
+	<title>CV — Clement Akinsola</title>
+	<meta name="description" content="CV of Akinsola Clement Morakinyo — Bioinformatician: cancer genomics, NGS analysis and AI model evaluation." />
+	<meta name="theme-color" content="#f5f3ee" />
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6b66'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23fff' text-anchor='middle'%3ECA%3C/text%3E%3C/svg%3E" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/calm.css" />
+	<script src="assets/js/calm.js"></script>
 </head>
 <body>
-	<header id="main-header">
-		<div class="container nav-container">
-			<a href="index.html" class="logo-text">CEEFOUR</a>
-			<nav>
-				<ul class="nav-links">
-					<li><a href="index.html">Portfolio</a></li>
-					<li><a href="index.html#contact">Contact</a></li>
-				</ul>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a href="index.html" class="brand">Clement <span>Akinsola</span></a>
+			<nav class="nav" id="site-nav" aria-label="Main">
+				<a href="index.html#about">About</a>
+				<a href="index.html#experience">Experience</a>
+				<a href="index.html#projects">Projects</a>
+				<a href="index.html#publications">Publications</a>
+				<a href="index.html#contact">Contact</a>
+				<a href="assets/Akinsola_Clement_Morakinyo_CV.pdf" class="nav-cv" download>Download PDF</a>
 			</nav>
+			<div class="header-actions">
+				<button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch light or dark theme">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+				</button>
+				<button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+				</button>
+			</div>
 		</div>
 	</header>
 
-	<main class="container cv-page">
-		<div class="cv-actions">
-			<button type="button" class="btn btn-primary" onclick="window.print()">
-				Save as PDF / Print
-			</button>
-			<a href="index.html" class="btn btn-secondary">Back to Portfolio</a>
+	<main class="page">
+		<div class="container page-narrow">
+			<a href="index.html" class="back-link">← Back to portfolio</a>
+
+			<div class="doc-actions">
+				<a href="assets/Akinsola_Clement_Morakinyo_CV.pdf" class="btn btn-primary" download>Download PDF</a>
+				<a href="assets/Akinsola_Clement_Morakinyo_CV.docx" class="btn btn-ghost" download>Word version</a>
+				<button type="button" class="btn btn-ghost" onclick="window.print()">Print</button>
+			</div>
+
+			<article class="doc">
+				<h1>Akinsola Clement Morakinyo</h1>
+				<p class="sub">Bioinformatician · Cancer Genomics, NGS Analysis &amp; AI Model Evaluation</p>
+				<div class="contact-line">
+					<span>Lagos, Nigeria</span>
+					<a href="mailto:ceefourme@gmail.com">ceefourme@gmail.com</a>
+					<a href="tel:+2348174226011">+234 817 422 6011</a>
+					<a href="https://github.com/Ceefour18" target="_blank" rel="noopener">GitHub</a>
+					<a href="https://www.linkedin.com/in/clement-akinsola/" target="_blank" rel="noopener">LinkedIn</a>
+				</div>
+
+				<h2>Professional profile</h2>
+				<p>Bioinformatician and Clinical Data Scientist with a strong quantitative research background and hands-on experience in NGS and cancer genomics. Experienced in WGS, WES, bulk RNA-seq and scRNA-seq analysis, with practical expertise in GATK4/Mutect2, SAMtools, DESeq2, Seurat and Nextflow/nf-core, and currently extending into spatial transcriptomics. Builds reproducible, containerised workflows and applies clinical research expertise to genomic and biomedical datasets.</p>
+
+				<h2>Technical skills</h2>
+				<dl class="skill-table">
+					<dt>Core NGS &amp; variant analysis</dt><dd>GATK4/Mutect2 (somatic calling, BQSR), BWA-MEM, SAMtools, bedtools, SnpEff, FastQC, Trimmomatic, BLAST</dd>
+					<dt>Transcriptomics &amp; single-cell</dt><dd>DESeq2, Seurat v5, Harmony, clusterProfiler/GSEA, Scanpy; spatial transcriptomics (in progress)</dd>
+					<dt>Workflows &amp; compute</dt><dd>Nextflow/nf-core, Docker, AWS EC2, HPC, Google Colab, Git/GitHub</dd>
+					<dt>Programming</dt><dd>Python (Biopython), R (Bioconductor), Bash/Linux, SQL</dd>
+					<dt>Data types</dt><dd>FASTQ, BAM, VCF, count/expression and single-cell matrices, methylation arrays, MRI, clinical datasets</dd>
+					<dt>AI &amp; machine learning</dt><dd>LLM and RAG applications, deep learning (3D U-Net), predictive modelling</dd>
+					<dt>Also proficient</dt><dd>GWAS QC, COSMIC mutational signatures, MEGA phylogenetics, survival analysis (Kaplan–Meier, Cox), Streamlit, Power BI, REDCap, SPSS, Stata, Epi Info</dd>
+				</dl>
+
+				<h2>Professional experience</h2>
+				<div class="doc-entry">
+					<div class="doc-entry-head"><h3>Research Intern — Medical Artificial Intelligence Laboratory (MAI Lab)</h3><span class="when">2026 – Present</span></div>
+					<div class="where">Lagos, Nigeria</div>
+					<ul>
+						<li>Curated brain MRI data for medical AI: organised multi-sequence scans and segmentation labels, checked image–label consistency and quality, and prepared standardised datasets for model training and evaluation.</li>
+						<li>Built and deployed a BraTS-Africa 3D U-Net brain tumour segmentation model on African glioma MRI data (SPARK dataset), with a live Streamlit demo and transparent reporting of performance and limitations.</li>
+					</ul>
+				</div>
+				<div class="doc-entry">
+					<div class="doc-entry-head"><h3>Independent Clinical Data Scientist &amp; Bioinformatics Analyst</h3><span class="when">March 2016 – Present</span></div>
+					<div class="where">Remote — serving academic medical centres, hospital research departments, and clinical investigators across Nigeria</div>
+					<ul>
+						<li>Built end-to-end predictive models and ML pipelines on clinical datasets spanning epidemiology, endocrinology, radiology, and internal medicine, including a logistic regression mortality model (hold-out ROC AUC 0.974).</li>
+						<li>Developed LLM and RAG-based biomedical research applications, including a clinically grounded hMPV question-answering chatbot; built interactive analytical dashboards using Streamlit and Python.</li>
+						<li>Created reproducible bioinformatics workflows for somatic variant calling, TP53 mutation profiling, protein characterisation, and TCGA cancer transcriptomic and survival analysis.</li>
+						<li>Cleaned, validated, and restructured raw clinical datasets, and authored step-by-step results write-ups with traceable outputs for dissertations and manuscripts.</li>
+						<li>Collaborated with multidisciplinary clinical teams on research design, data analysis, and manuscript preparation, contributing to 7 peer-reviewed publications.</li>
+					</ul>
+				</div>
+				<div class="doc-entry">
+					<div class="doc-entry-head"><h3>Invited Resource Person — Biostatistics &amp; Research Methodology</h3><span class="when">2018 – Present</span></div>
+					<div class="where">Lagos University Teaching Hospital (LUTH) &amp; Lagos State University Teaching Hospital (LASUTH), Lagos, Nigeria</div>
+					<ul>
+						<li>Designed and delivered biostatistics and research methodology training for 150+ postgraduate medical candidates preparing for WACP, WACS, and NPMCN fellowship examinations.</li>
+						<li>Facilitated capacity-building sessions in-person and remotely covering study design, hypothesis testing, sample size calculation, and statistical interpretation.</li>
+					</ul>
+				</div>
+
+				<h2>Education</h2>
+				<div class="doc-entry"><div class="doc-entry-head"><h3>MSc Cell and Molecular Biology — University of Lagos, Nigeria</h3><span class="when">Expected 2027</span></div></div>
+				<div class="doc-entry"><div class="doc-entry-head"><h3>MSc Public Health (Epidemiology) — University of Lagos, Nigeria</h3><span class="when">Coursework completed, 2021</span></div></div>
+				<div class="doc-entry"><div class="doc-entry-head"><h3>BSc Microbiology — University of Lagos, Nigeria</h3><span class="when">2016</span></div></div>
+
+				<h2>Key projects</h2>
+				<div class="doc-entry">
+					<div class="doc-entry-head"><h3>Somatic WGS Pipeline — HCC1395 Tumour–Normal, SEQC2 Benchmark</h3></div>
+					<div class="where"><a href="https://github.com/Ceefour18/Breast_cancer_WGS" target="_blank" rel="noopener">github.com/Ceefour18/Breast_cancer_WGS</a> · <a href="case-study-hcc1395.html">case study</a></div>
+					<ul>
+						<li>Modular 7-stage tumour–normal WGS pipeline (FastQC → BWA-MEM → BQSR → Mutect2 → SnpEff) on 16 vCPU AWS, validated against the SEQC2 v1.2 gold-standard truth set.</li>
+						<li>Debugged FASTQ read-name mismatches and cut runtime ~3× (48 h → 14 h) by migrating to Colab Pro+; each stage independently re-runnable and auditable.</li>
+					</ul>
+				</div>
+				<div class="doc-entry">
+					<div class="doc-entry-head"><h3>Somatic WES Pipeline — HCC1143 Breast Cancer Cell Line</h3></div>
+					<div class="where"><a href="https://github.com/Ceefour18/somatic-wes-breast-cancer-gatk4" target="_blank" rel="noopener">github.com/Ceefour18/somatic-wes-breast-cancer-gatk4</a></div>
+					<ul>
+						<li>Docker-based GATK4 Best Practices pipeline targeting chr17 (TP53, BRCA1, ERBB2): 99.47% reads mapped, 1.11% contamination; FilterMutectCalls reduced 182 raw calls to 27 PASS variants.</li>
+						<li>Recovered the clonal TP53 p.Arg248Gln driver (VAF 98.6%); C&gt;T transitions (52%) consistent with SBS1/SBS5 ageing signatures. Tools: BWA-MEM, GATK4, SAMtools, SnpEff, Docker, Python.</li>
+					</ul>
+				</div>
+				<div class="doc-entry">
+					<div class="doc-entry-head"><h3>TCGA-BRCA RNA-seq — PAM50 Basal-like vs Luminal A</h3></div>
+					<div class="where"><a href="https://github.com/Ceefour18/tcga-brca-rnaseq" target="_blank" rel="noopener">github.com/Ceefour18/tcga-brca-rnaseq</a></div>
+					<ul><li>752 tumours via GDC/TCGAbiolinks; DESeq2 + apeglm identified 5,346 DEGs; GO/KEGG and GSEA enrichment; Kaplan–Meier and Cox survival modelling.</li></ul>
+				</div>
+				<div class="doc-entry">
+					<div class="doc-entry-head"><h3>scRNA-seq Breast Cancer Tumour Microenvironment (GSE176078)</h3></div>
+					<div class="where"><a href="https://github.com/Ceefour18/scRNA_BreastCA" target="_blank" rel="noopener">github.com/Ceefour18/scRNA_BreastCA</a></div>
+					<ul><li>Docker-containerised Seurat v5 pipeline (Harmony, scDblFinder, SingleR, sccomp, pseudobulk DESeq2) across 9 patients and 3 subtypes; fibroblasts elevated in TNBC (FDR 0.011); 9 T cell subclusters resolved.</li></ul>
+				</div>
+				<div class="doc-entry">
+					<div class="doc-entry-head"><h3>TP53 Cancer Genomics &amp; In Silico Protein Characterisation</h3></div>
+					<div class="where"><a href="https://github.com/Ceefour18/tp53-cancer-genomics" target="_blank" rel="noopener">github.com/Ceefour18/tp53-cancer-genomics</a></div>
+					<ul><li>Processed 2,319 ClinVar variants (335 pathogenic); modelled five TP53 hotspot mutations with BLAST (99.46% identity) and functional domain annotation; MEGA phylogenetic analysis. Tools: Python, Biopython, R.</li></ul>
+				</div>
+
+				<h2>Selected publications (7 peer-reviewed)</h2>
+				<ul>
+					<li>Association between Social Support and Glycemic Control among Older Type 2 Diabetes Patients. <em>Nigerian Journal of Clinical Medicine</em> (2024)</li>
+					<li>Physicians' Knowledge and Barriers in Sepsis Diagnosis and Management. <em>Journal of Clinical Sciences</em> (2023)</li>
+					<li>Prevalence and Determinants of Peripheral Arterial Disease in Children with Nephrotic Syndrome. <em>PLOS ONE</em> (2022)</li>
+				</ul>
+				<p style="margin-top:10px;">Full publication list: <a href="https://github.com/Ceefour18/Peer-reviewed-Publication" target="_blank" rel="noopener">github.com/Ceefour18/Peer-reviewed-Publication</a></p>
+
+				<h2>Key certifications</h2>
+				<ul>
+					<li>Use nf-core (Nextflow) — Seqera, Nextflow Training Week 2026</li>
+					<li>FAS x CHIP Lecture Series 2026: AI in Medicine — Future African Scientist x Boston Children's Hospital</li>
+					<li>GWAS (Genome-Wide Association Studies) — ISGlobal, Barcelona Institute for Global Health</li>
+					<li>Biomedical Data Science — ISGlobal</li>
+					<li>Research Data Management — H3Africa Consortium</li>
+					<li>Reproducible Research — World Bank DIME</li>
+					<li>AWS Cloud Practitioner Essentials</li>
+					<li>IBM AI Foundations</li>
+					<li>Generative AI — Sail Innovation Lab</li>
+					<li>Nigerian National Code for Health Research Ethics — CITI Program (2026)</li>
+					<li>TCPS 2: CORE 2022, Research Ethics — Panel on Research Ethics, Canada (2026)</li>
+				</ul>
+				<p style="margin-top:10px;">View certificates: <a href="https://drive.google.com/drive/folders/1qNPRoC_B_4x82F5xLTSy3hkNh7T-PBLE" target="_blank" rel="noopener">Google Drive folder ↗</a></p>
+			</article>
 		</div>
-
-		<article class="glass-card cv-content">
-			<h1>Clement Akinsola</h1>
-			<p><strong>Clinical Data Scientist &amp; Bioinformatician</strong> · Lagos, Nigeria</p>
-			<p>
-				<a href="mailto:ceefourme@gmail.com">ceefourme@gmail.com</a> ·
-				<a href="https://www.linkedin.com/in/clement-akinsola/" target="_blank" rel="noopener">LinkedIn</a> ·
-				<a href="https://github.com/Ceefour18" target="_blank" rel="noopener">GitHub</a>
-			</p>
-			<p><em>Open to relocation / remote — UK, CH, DE, NL</em></p>
-
-			<h2>Summary</h2>
-			<p>
-				Clinical bioinformatician specialising in cancer genomics — WES/WGS somatic variant calling (GATK4/Mutect2), RNA-seq, and multi-omics integration. Built Docker-based pipelines validated against SEQC2 gold-standard truth sets. Focused on precision oncology and reproducible computational workflows.
-			</p>
-
-			<h2>Selected Projects</h2>
-			<h3>HCC1395 Somatic WGS Pipeline — SEQC2 Benchmark</h3>
-			<p>
-				Tumour-normal WGS pipeline (BWA-MEM → BQSR → Mutect2) on AWS; validated against SEQC2 v1.2 truth set. Debugged FASTQ read-name mismatches; reduced runtime ~3× via Colab migration.
-			</p>
-			<h3>Somatic WES Breast Cancer Pipeline (GATK4)</h3>
-			<p>
-				Docker GATK4 pipeline on HCC1143 WES: 182 → 27 PASS variants; clonal TP53 p.Arg248Gln (VAF 98.6%); COSMIC mutational signatures; 1.11% contamination.
-			</p>
-			<h3>TP53 Cancer Genomics</h3>
-			<p>
-				Processed 2,319 ClinVar variants; 335 pathogenic; 99.46% BLAST identity to NM_000546.6 reference.
-			</p>
-
-			<h2>Technical Skills</h2>
-			<p>
-				<strong>Bioinformatics:</strong> GATK4, Mutect2, BWA, SAMtools, SnpEff, FastQC, Docker, Nextflow (in progress), WES/WGS, RNA-seq<br />
-				<strong>Programming:</strong> Python, R, Bash, SQL<br />
-				<strong>Cloud:</strong> AWS EC2, Google Colab, CI/CD<br />
-				<strong>Domains:</strong> Somatic variant calling, mutational signatures, clinical genomics, biostatistics
-			</p>
-
-			<h2>Education &amp; Publications</h2>
-			<p>Co-authored peer-reviewed publications in medical biostatistics, epidemiology, and digital healthcare. See <a href="https://github.com/Ceefour18/Peer-reviewed-Publication" target="_blank" rel="noopener">publications repository</a>.</p>
-		</article>
 	</main>
 
-	<footer class="main-footer">
-		<div class="container footer-container">
-			<div class="footer-copy">&copy; 2026 Clement Akinsola (Ceefour). All rights reserved.</div>
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<span>&copy; <span id="year">2026</span> Akinsola Clement Morakinyo</span>
+			<span><a href="index.html">Portfolio</a><a href="mailto:ceefourme@gmail.com">Email</a></span>
 		</div>
 	</footer>
 </body>

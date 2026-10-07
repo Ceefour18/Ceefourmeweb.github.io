@@ -3,167 +3,110 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Case Study: HCC1395 Somatic WGS Pipeline | Ceefour</title>
+	<title>HCC1395 WGS Case Study — Clement Akinsola</title>
 	<meta name="description" content="End-to-end HCC1395 tumour-normal WGS somatic variant calling pipeline — SEQC2 benchmark validation, FASTQ debugging, and GATK4 Mutect2 on AWS." />
-	<link rel="stylesheet" href="assets/css/modern-theme.css" />
+	<meta name="theme-color" content="#f5f3ee" />
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6b66'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23fff' text-anchor='middle'%3ECA%3C/text%3E%3C/svg%3E" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/calm.css" />
+	<script src="assets/js/calm.js"></script>
 </head>
 <body>
-	<div class="glowing-blob blob-1"></div>
-	<div class="glowing-blob blob-2"></div>
-
-	<header id="main-header">
-		<div class="container nav-container">
-			<a href="index.html" class="logo-text">CEEFOUR</a>
-			<nav>
-				<ul class="nav-links">
-					<li><a href="index.html#about">About</a></li>
-					<li><a href="index.html#projects">Projects</a></li>
-					<li><a href="cv.html" class="nav-cv-link">CV</a></li>
-					<li><a href="index.html#contact">Contact</a></li>
-				</ul>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a href="index.html" class="brand">Clement <span>Akinsola</span></a>
+			<nav class="nav" id="site-nav" aria-label="Main">
+				<a href="index.html#about">About</a>
+				<a href="index.html#projects">Projects</a>
+				<a href="index.html#contact">Contact</a>
+				<a href="cv.html" class="nav-cv">View CV</a>
 			</nav>
+			<div class="header-actions">
+				<button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch light or dark theme">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+				</button>
+				<button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+				</button>
+			</div>
 		</div>
 	</header>
 
-	<main class="container case-study-page">
-		<a href="index.html#projects" class="case-back-link">
-			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
-			Back to Projects
-		</a>
+	<main class="page">
+		<div class="container page-narrow">
+			<a href="index.html#projects" class="back-link">← Back to projects</a>
 
-		<div class="case-hero">
-			<span class="project-tag">Flagship Case Study</span>
-			<h1>HCC1395 Somatic WGS Pipeline</h1>
-			<p class="case-subtitle">
-				End-to-end tumour-normal whole genome sequencing pipeline for breast cancer, benchmarked against the SEQC2 gold-standard truth set — from raw FASTQ through Mutect2 calling, debugging, and ROC validation.
-			</p>
+			<article class="doc">
+				<div class="eyebrow"><span class="dot" aria-hidden="true"></span>Flagship case study</div>
+				<h1>HCC1395 Somatic WGS Pipeline</h1>
+				<p class="sub">End-to-end tumour–normal whole-genome sequencing pipeline for breast cancer, benchmarked against the SEQC2 gold-standard truth set — from raw FASTQ through Mutect2 calling, debugging and validation.</p>
 
-			<div class="case-metrics-row">
-				<div class="case-metric-box glass-card">
-					<span class="value">SEQC2</span>
-					<span class="label">Gold-standard benchmark</span>
+				<div class="case-metrics">
+					<div><span class="v">SEQC2</span><span class="l">Gold-standard benchmark</span></div>
+					<div><span class="v">~3×</span><span class="l">Faster after Colab migration</span></div>
+					<div><span class="v">16</span><span class="l">vCPU AWS instance</span></div>
+					<div><span class="v">7</span><span class="l">Automated stages</span></div>
 				</div>
-				<div class="case-metric-box glass-card">
-					<span class="value">~3×</span>
-					<span class="label">Faster via Colab migration</span>
+
+				<h2>Problem</h2>
+				<p>Clinical genomics teams need somatic variant calling pipelines that are reproducible and validated against community gold standards — not just "it runs." The SEQC2 consortium established HCC1395 (triple-negative breast cancer) and HCC1395BL (matched normal) as reference samples with high-confidence somatic SNV/INDEL truth sets across ~40,000 SNVs and complex genomic alterations.</p>
+				<p>The goal: build a Docker-based WGS pipeline targeting clinically relevant breast cancer genes, validate calls against the SEQC2 v1.2 truth set, and document the full debugging process — the kind of work expected on industry precision oncology platforms.</p>
+
+				<h2>Approach</h2>
+				<p>A modular, bash-orchestrated pipeline deployed on AWS (r6i.4xlarge: 16 vCPU, 128 GB RAM, 500 GB gp3 storage), with each stage containerised for reproducibility:</p>
+				<ul>
+					<li><strong>Alignment</strong> — BWA-MEM on paired-end tumour/normal FASTQs with proper read groups</li>
+					<li><strong>Pre-processing</strong> — GATK MarkDuplicates and BQSR against dbSNP138 + Mills indels</li>
+					<li><strong>Calling</strong> — Mutect2 tumour–normal paired mode → FilterMutectCalls</li>
+					<li><strong>Downstream</strong> — structural variant calling and SnpEff functional annotation</li>
+					<li><strong>Validation</strong> — comparison against SEQC2 high-confidence regions; variant-level sensitivity/precision profiling</li>
+				</ul>
+				<p>When local WSL2 compute became a bottleneck (~48 h end-to-end), I migrated the alignment and Mutect2 stages to Google Colab Pro+ with mounted Drive storage, cutting wall-clock runtime to ~14 h without changing the analytical logic.</p>
+
+				<h2>Tools &amp; infrastructure</h2>
+				<div class="focus-list">
+					<span class="chip">GATK 4.6</span><span class="chip">Mutect2</span><span class="chip">BWA-MEM</span><span class="chip">SAMtools</span><span class="chip">Docker</span><span class="chip">AWS EC2</span><span class="chip">Google Colab</span><span class="chip">SnpEff</span><span class="chip">Python / R</span><span class="chip">SEQC2 truth set</span><span class="chip">GRCh38</span>
 				</div>
-				<div class="case-metric-box glass-card">
-					<span class="value">16</span>
-					<span class="label">vCPU AWS pipeline</span>
+
+				<h2>Key challenge: FASTQ read-name mismatch</h2>
+				<div class="callout">
+					<h3>Debugging a silent alignment failure</h3>
+					<p>BWA-MEM alignment initially produced BAMs with no properly paired reads. Inspecting the FASTQ headers revealed the cause: tumour R1 and R2 files used inconsistent read-name suffixes (<code>/1</code> vs <code>/2</code> mismatches, and truncated IDs between the SEQC2 SRA download and my local rename step). BWA needs strictly paired read names — a mismatch means a pipeline that "completes" but produces no callable variants.</p>
+					<p style="margin-bottom:0;"><strong>Fix:</strong> a normalisation script that strips platform-specific suffixes and enforces consistent <code>@READ_ID 1:N:0:…</code> / <code>@READ_ID 2:N:0:…</code> naming across all four FASTQ files, followed by FastQC to confirm paired-end integrity before re-running alignment. That single fix unblocked the entire downstream Mutect2 chain.</p>
 				</div>
-				<div class="case-metric-box glass-card">
-					<span class="value">7</span>
-					<span class="label">Automated stages</span>
+
+				<h2>Results</h2>
+				<ul>
+					<li>Somatic calls validated against the <strong>SEQC2 v1.2 high-confidence truth set</strong> (HCC1395/HCC1395BL) in benchmark regions</li>
+					<li>Full tumour–normal workflow automated from FASTQ to filtered VCF with reproducible Docker mounts</li>
+					<li>Runtime reduced ~3× (~48 h → ~14 h) by moving compute-heavy stages to Colab Pro+</li>
+					<li>The companion WES pipeline (HCC1143, chr17) independently recovered clonal TP53 p.Arg248Gln at 98.6% VAF with 1.11% cross-sample contamination</li>
+				</ul>
+
+				<h2>What I'd do next</h2>
+				<ul>
+					<li>Port the bash workflow to <strong>Nextflow</strong> following nf-core conventions for HPC and cloud scalability</li>
+					<li>Extend validation to the full-genome SEQC2 INDEL truth set and publish a comparison notebook</li>
+					<li>Integrate <strong>RNA-seq</strong> from the same cell line for multi-omics driver confirmation</li>
+					<li>Add CNV calling (GATK CNV or Control-FREEC) given HCC1395's known aneuploidy</li>
+					<li>Containerise with Singularity/Apptainer for institutional HPC deployment</li>
+				</ul>
+
+				<div class="hero-actions" style="margin-top:36px;">
+					<a href="https://github.com/Ceefour18/Breast_cancer_WGS" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub ↗</a>
+					<a href="https://github.com/Ceefour18/somatic-wes-breast-cancer-gatk4" class="btn btn-ghost" target="_blank" rel="noopener">Related WES pipeline</a>
+					<a href="index.html#contact" class="btn btn-ghost">Discuss this work</a>
 				</div>
-			</div>
-		</div>
-
-		<section class="case-section glass-card" style="padding: 2rem;">
-			<h2>Problem</h2>
-			<p>
-				Clinical genomics teams need reproducible somatic variant calling pipelines that can be validated against community gold standards — not just "it runs." The SEQC2 consortium established HCC1395 (triple-negative breast cancer) and HCC1395BL (matched normal) as reference samples with high-confidence somatic SNV/INDEL truth sets across ~40,000 SNVs and complex genomic alterations.
-			</p>
-			<p>
-				The goal: build a Docker-based WGS pipeline targeting clinically relevant breast cancer genes, validate calls against the SEQC2 v1.2 truth set, and document the full debugging process — the kind of work expected in industry precision oncology platforms.
-			</p>
-		</section>
-
-		<section class="case-section glass-card" style="padding: 2rem; margin-top: 1.5rem;">
-			<h2>Approach</h2>
-			<p>
-				I implemented a modular bash-orchestrated pipeline deployed on AWS (r6i.4xlarge: 16 vCPU, 128 GB RAM, 500 GB gp3 storage), with each stage containerised for reproducibility:
-			</p>
-			<ul>
-				<li><strong>Alignment</strong> — BWA-MEM on paired-end tumour/normal FASTQs with proper read groups</li>
-				<li><strong>Pre-processing</strong> — GATK MarkDuplicates and BQSR against dbSNP138 + Mills indels</li>
-				<li><strong>Calling</strong> — Mutect2 tumour-normal paired mode → FilterMutectCalls</li>
-				<li><strong>Downstream</strong> — Structural variant calling and SnpEff functional annotation modules</li>
-				<li><strong>Validation</strong> — ROC analysis against SEQC2 high-confidence regions; variant-level sensitivity/precision profiling</li>
-			</ul>
-			<p>
-				When local WSL2 compute became a bottleneck (~48 h end-to-end), I migrated the alignment and Mutect2 stages to Google Colab Pro+ with mounted Drive storage, cutting wall-clock runtime to ~14 h (~3× improvement) without changing the analytical logic.
-			</p>
-		</section>
-
-		<section class="case-section glass-card" style="padding: 2rem; margin-top: 1.5rem;">
-			<h2>Tools &amp; Infrastructure</h2>
-			<div class="case-tools-grid">
-				<span class="skill-badge">GATK 4.6</span>
-				<span class="skill-badge">Mutect2</span>
-				<span class="skill-badge">BWA-MEM</span>
-				<span class="skill-badge">SAMtools</span>
-				<span class="skill-badge">Docker</span>
-				<span class="skill-badge">AWS EC2</span>
-				<span class="skill-badge">Google Colab</span>
-				<span class="skill-badge">SnpEff</span>
-				<span class="skill-badge">Python / R</span>
-				<span class="skill-badge">SEQC2 truth set</span>
-				<span class="skill-badge">GRCh38</span>
-			</div>
-		</section>
-
-		<section class="case-section glass-card" style="padding: 2rem; margin-top: 1.5rem;">
-			<h2>Key Challenge: FASTQ Read-Name Mismatch</h2>
-			<div class="case-challenge-box">
-				<h3>How I debugged a silent alignment failure</h3>
-				<p>
-					BWA-MEM alignment initially produced empty BAMs with no mapped reads. FastQC and <code>head</code> inspection of the FASTQ headers revealed the root cause: tumour R1 and R2 files used inconsistent read-name suffixes (e.g. <code>/1</code> vs <code>/2</code> mismatches, and truncated IDs between the SEQC2 SRA download and my local rename step). BWA requires strictly paired read names — a mismatch means zero proper pairs and a pipeline that "completes" but produces no callable variants.
-				</p>
-				<p>
-					<strong>Fix:</strong> I wrote a normalisation script to strip platform-specific suffixes and enforce consistent <code>@READ_ID 1:N:0:...</code> / <code>@READ_ID 2:N:0:...</code> naming across all four FASTQ files, then re-ran FastQC to confirm paired-end integrity before re-submitting alignment. This single fix unblocked the entire downstream Mutect2 chain — a concrete example of the read-level QC debugging that production pipelines depend on.
-				</p>
-			</div>
-		</section>
-
-		<section class="case-section glass-card" style="padding: 2rem; margin-top: 1.5rem;">
-			<h2>Results</h2>
-			<ul>
-				<li>Validated somatic calls against the <strong>SEQC2 v1.2 high-confidence truth set</strong> (HCC1395/HCC1395BL) in benchmark HC regions — sensitivity/precision profiling against PASS-labelled variants</li>
-				<li>Full tumour-normal WGS workflow automated from FASTQ → filtered VCF with reproducible Docker mounts</li>
-				<li>Runtime reduced ~3× (~48 h → ~14 h) by migrating compute-heavy stages to Colab Pro+</li>
-				<li>Complementary WES pipeline (HCC1143/chr17) independently recovered clonal TP53 p.Arg248Gln at 98.6% VAF with 1.11% cross-sample contamination</li>
-			</ul>
-
-			<div class="case-metrics-row" style="margin-top: 1.5rem;">
-				<div class="case-metric-box">
-					<span class="value">~14h</span>
-					<span class="label">Colab runtime</span>
-				</div>
-				<div class="case-metric-box">
-					<span class="value">128 GB</span>
-					<span class="label">Peak RAM (BQSR)</span>
-				</div>
-				<div class="case-metric-box">
-					<span class="value">GATK 4.6</span>
-					<span class="label">Mutect2 calling</span>
-				</div>
-			</div>
-		</section>
-
-		<section class="case-section glass-card" style="padding: 2rem; margin-top: 1.5rem;">
-			<h2>What I'd Do Next</h2>
-			<ul>
-				<li>Port the bash workflow to <strong>Nextflow</strong> with nf-core conventions for HPC/cloud scalability</li>
-				<li>Extend validation to full-genome SEQC2 INDEL truth set and publish a comparison notebook</li>
-				<li>Integrate <strong>RNA-seq</strong> from the same cell line for multi-omics driver confirmation</li>
-				<li>Add CNV calling (GATK CNV or Control-FREEC) given HCC1395's known aneuploidy profile</li>
-				<li>Containerise with Singularity for institutional HPC deployment</li>
-			</ul>
-		</section>
-
-		<div class="case-cta-row">
-			<a href="https://github.com/Ceefour18/Breast_cancer_WGS" class="btn btn-primary" target="_blank" rel="noopener">
-				View GitHub Repository
-				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-			</a>
-			<a href="https://github.com/Ceefour18/somatic-wes-breast-cancer-gatk4" class="btn btn-secondary" target="_blank" rel="noopener">Related WES Pipeline</a>
-			<a href="index.html#contact" class="btn btn-secondary">Discuss This Work</a>
+			</article>
 		</div>
 	</main>
 
-	<footer class="main-footer">
-		<div class="container footer-container">
-			<div class="footer-copy">&copy; 2026 Clement Akinsola (Ceefour). All rights reserved.</div>
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<span>&copy; <span id="year">2026</span> Akinsola Clement Morakinyo</span>
+			<span><a href="index.html">Portfolio</a><a href="cv.html">CV</a></span>
 		</div>
 	</footer>
 </body>
