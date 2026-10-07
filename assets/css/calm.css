@@ -375,3 +375,6 @@ code { font-family: var(--mono); font-size: .86em; background: var(--surface-2);
 	.projects > .project:last-child:nth-child(even) { grid-column: 1 / -1; }
 }
 
+
+a.pub-title { text-decoration: none; }
+a.pub-title:hover { color: var(--accent); text-decoration: underline; }
