@@ -241,6 +241,9 @@ p { margin: 0 0 1em; }
 .project-links a { text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; }
 .project-links a:hover { text-decoration: underline; }
 .featured-side { background: var(--surface-2); border-radius: 10px; padding: 20px; font-size: .92rem; }
+.featured-figure { margin: 0; }
+.featured-figure img { width: 100%; height: auto; border-radius: 8px; background: #fff; border: 1px solid var(--line); }
+.featured-figure figcaption { margin-top: 10px; color: var(--muted); font-size: .85rem; }
 .featured-side h4 { margin: 0 0 10px; font-family: var(--mono); font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
 .pipeline { list-style: none; margin: 0; padding: 0; counter-reset: step; }
 .pipeline li { counter-increment: step; display: grid; grid-template-columns: 28px 1fr; gap: 8px; padding: 6px 0; color: var(--ink-soft); }
